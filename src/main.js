@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
+import router from './router/index'
+import store from './store/store'
+
+import 'normalize.css/normalize.css'
+import '@/styles/index.scss'
 
 Vue.config.productionTip = false
 
