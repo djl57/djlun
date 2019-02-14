@@ -27,3 +27,13 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+创建一级标题的步骤：
+1、 在 modules 中新建一个 js 文件，将路由写在文件中即可
+
+创建二级标题的步骤
+1、 二级标题属于哪个以及标题？写到那个以及标题所在的文件中去，并将 meta.type 设为该一级标题的 name
+
+增加一篇文章的步骤：
+1、 文章属于哪个一级标题？写到那个一级标题路由所在的文件中去，如果没有则新创建一个路由文件
+2、 文章属于哪个二级标题？将该文章路由的 meta.type 设为该二级标题的 name

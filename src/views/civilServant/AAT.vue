@@ -1,13 +1,13 @@
 <template>
-  <div class="civilServant-container">
-    省考
+  <div class="aat">
+    AAT
     <router-link to="/home">home</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'AAT',
   data() {
     return {
       
@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.aat {
+  
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="js">
+  <div class="javascript">
     js
-    <router-link to="/">home</router-link>
+    <router-link to="/home">home</router-link>
   </div>
 </template>
 

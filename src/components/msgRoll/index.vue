@@ -1,13 +1,12 @@
 <template>
-  <div class="civilServant-container">
-    省考
-    <router-link to="/home">home</router-link>
+  <div class="msgRoll">
+    消息滚动栏
   </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'msgRoll',
   data() {
     return {
       
@@ -23,5 +22,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.msgRoll {
+  height: 20px;
+  margin: 0 10px;
+  color: #E51C23;
+}
 </style>

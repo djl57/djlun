@@ -1,13 +1,13 @@
 <template>
-  <div class="civilServant-container">
-    省考
+  <div class="css">
+    css
     <router-link to="/home">home</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'css',
   data() {
     return {
       

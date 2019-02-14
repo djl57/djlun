@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { civilServant } from './modules/civilServant'
+import { home } from './modules/home'
+// import { javascript } from './modules/javascript'
+// import { css } from './modules/css'
+// import { html } from './modules/html'
+// import { vuejs } from './modules/vuejs'
+// import { nodejs } from './modules/nodejs'
+import { civilServant, AAT, application, baseIntro, intro1 } from './modules/civilServant'
 
 Vue.use(Router)
 
@@ -8,9 +14,25 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import(/* webpackChunkName: "home" */ '@/views/Home/home')
+      name: 'page',
+      component: () => import(/* webpackChunkName: "home" */ '@/views/page/page')
     },
-    civilServant
+    home,
+
+    // javascript,
+
+    // css,
+
+    // html,
+
+    // vuejs,
+
+    // nodejs,
+
+    civilServant,
+    AAT,
+    application,
+    baseIntro,
+    intro1
   ]
 })

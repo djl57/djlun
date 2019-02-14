@@ -1,6 +1,6 @@
 <template>
-  <div class="civilServant-container">
-    省考
+  <div class="nodejs">
+    node
     <router-link to="/home">home</router-link>
   </div>
 </template>
