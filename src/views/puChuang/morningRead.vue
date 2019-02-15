@@ -1,13 +1,12 @@
 <template>
-  <div class="javascript">
-    js
-    <router-link to="/home">home</router-link>
+  <div class="app-container">
+    morningRead
   </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'morningRead',
   data() {
     return {
       

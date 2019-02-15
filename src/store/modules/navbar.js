@@ -1,10 +1,16 @@
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const req = require.context('../articles', false, /\.json$/)
+const articles = requireAll(req)
+
 import router from '@/router'
 
 export default {
   state: {
     firstLevel: [],
     secondLevel: [],
-    articleTitle: []
+    articleTitle: [],
+    curArticle: null,
+    curBread: null
   },
   mutations: {
     GET_LIST: state => {
@@ -23,9 +29,24 @@ export default {
           }
         }
       })
+    },
+    GET_CUR_ARTICLE: (state) => {
+      state.curArticle = articles.filter(el => `/${el.name}` === window.location.href.split('#')[1])
+    },
+    GET_CUR_BREAD: state => {
+      state.curBread = state.firstLevel.filter(el => window.location.href.split('#')[1] === el.path)
+      if (state.curBread.length === 0) {
+        state.curBread = state.secondLevel.filter(el => window.location.href.split('#')[1] === el.path)
+      }
+      if (state.curBread.length === 0) {
+        state.curBread = state.articleTitle.filter(el => window.location.href.split('#')[1] === el.path)
+      }
+      state.curBread.unshift({path: '/home', meta: { title: '首页' }})
     }
   },
   actions: {
     GetList: ({ commit }) => commit('GET_LIST'),
+    GetCurArticle: ({ commit }) => commit('GET_CUR_ARTICLE'),
+    GetCurBread: ({ commit }) => commit('GET_CUR_BREAD')
   },
 }

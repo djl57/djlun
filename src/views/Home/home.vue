@@ -1,12 +1,15 @@
 <template>
   <div class="home">
-    <div class="home-icon">
-      <svg-icon :icon-class="iconClass" />
-      <span>Today is {{iconClass}}.</span>
+    <div class="home-main">
+      <div class="home-icon">
+        <svg-icon :icon-class="iconClass" />
+        <span>Today is {{iconClass}}.</span>
+      </div>
+      <nav-search></nav-search>
+      <msg-roll></msg-roll>
+      <title-block></title-block>
     </div>
-    <nav-search></nav-search>
-    <msg-roll></msg-roll>
-    <title-block></title-block>
+    <v-footer></v-footer>
   </div>
 </template>
 
@@ -15,13 +18,15 @@ import icons from './getIcons'
 import NavSearch from '@/components/navSearch'
 import MsgRoll from '@/components/msgRoll'
 import TitleBlock from '@/components/titleBlock'
+import VFooter from '@/components/vFooter'
   
 export default {
   name: 'home',
   components: {
     NavSearch,
     MsgRoll,
-    TitleBlock
+    TitleBlock,
+    VFooter
   },
   data() {
     return {

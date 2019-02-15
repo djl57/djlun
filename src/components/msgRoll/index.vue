@@ -1,5 +1,5 @@
 <template>
-  <div class="msgRoll">
+  <div class="app-container">
     消息滚动栏
   </div>
 </template>
@@ -22,9 +22,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.msgRoll {
+.app-container {
   height: 20px;
-  margin: 0 10px;
   color: #E51C23;
 }
 </style>

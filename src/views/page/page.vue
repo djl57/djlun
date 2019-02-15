@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="app-container">
     <div class="page-count" @click="gotoHome">
       跳转 {{ count }} s
     </div>
@@ -21,28 +21,29 @@ export default {
     return {
       left: ['UI来源', '代码编写'],
       right: ['晋江文学城', 'djlun'],
-      count: 5
+      count: 5,
+      time: null
     }
   },
   mounted() {
     this.countDecrease()
   },
-  components: {
-    
-  },
   methods: {
     countDecrease() {
-      let time = setInterval(() => {
+      this.time = setInterval(() => {
         this.count--
         if (!this.count) {
-          clearInterval(time)
+          clearInterval(this.time)
           setTimeout(() => {
-            this.gotoHome()
+            this.$router.push({
+              path: '/home'
+            })
           }, 1000)
         }
       }, 1000)
     },
     gotoHome() {
+      clearInterval(this.time)
       this.$router.push({
         path: '/home'
       })
@@ -52,7 +53,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.page {
+.app-container {
   min-height: 100vh;
   background-color: #ffffff;
   position: relative;

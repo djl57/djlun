@@ -1,12 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import { home } from './modules/home'
-// import { javascript } from './modules/javascript'
-// import { css } from './modules/css'
-// import { html } from './modules/html'
-// import { vuejs } from './modules/vuejs'
-// import { nodejs } from './modules/nodejs'
-import { civilServant, AAT, application, baseIntro, intro1 } from './modules/civilServant'
+import { javascript } from './modules/javascript'
+import { css } from './modules/css'
+import { html } from './modules/html'
+import { vuejs } from './modules/vuejs'
+import { vueRouter } from './modules/vueRouter'
+import { nodejs } from './modules/nodejs'
+import { 
+  civilServant,
+  AAT,
+  application,
+  baseIntro,
+  intro1 } from './modules/civilServant'
+import { 
+  puChuang,
+  morningRead,
+  sixAdvances,
+  daxue } from './modules/puChuang'
 
 Vue.use(Router)
 
@@ -19,20 +30,27 @@ export default new Router({
     },
     home,
 
-    // javascript,
+    javascript,
 
-    // css,
+    css,
 
-    // html,
+    html,
 
-    // vuejs,
+    vuejs,
 
-    // nodejs,
+    vueRouter,
+
+    nodejs,
 
     civilServant,
     AAT,
     application,
     baseIntro,
-    intro1
+    intro1,
+
+    puChuang,
+    morningRead,
+    sixAdvances,
+    daxue
   ]
 })

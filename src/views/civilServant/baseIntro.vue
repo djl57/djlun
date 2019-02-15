@@ -1,5 +1,5 @@
 <template>
-  <div class="baseIntro">
+  <div class="app-container">
     baseIntro
     <router-link to="/home">home</router-link>
   </div>

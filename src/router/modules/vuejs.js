@@ -1,9 +1,10 @@
 const vuejs = {
   path: '/vuejs',
   name: 'vuejs',
-  component: () => import('@/views/vuejs/vuejs'),
+  component: () => import('@/views/home/firstTitle'),
   meta: {
     title: 'vue.js',
+    level: 1
   }
 }
 

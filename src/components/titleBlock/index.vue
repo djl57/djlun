@@ -1,14 +1,14 @@
 <template>
-  <div class="titleBlock">
+  <div class="app-container" @click="show">
     <div v-for="item in firstLevel" :key="item.title" v-show="item.path !== '/home'">
       <div class="first-title">
         <router-link :to="item.path">{{ item.meta.title }}</router-link>
       </div>
       <div class="second-title">
-        <div v-for="list in secondLevel" :key="list.title" v-show="list.meta.type === item.name" class="second-item">
+        <div v-for="list in curSecondLevel(item.name)" :key="list.title" class="second-item">
           <router-link :to="list.path">【{{ list.meta.title }}>>】</router-link>
-          <div v-for="ele in articleTitle" :key="ele.title" v-show="ele.meta.type === list.name">
-            <router-link :to="ele.path">{{ ele.meta.title }}</router-link>
+          <div v-for="ele in curArticleTitle(list.name)" :key="ele.title">
+            <router-link :to="ele.path" class="article-title">{{ ele.meta.title }}</router-link>
           </div>
         </div>
       </div>
@@ -18,6 +18,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+
 export default {
   name: 'titleBlock',
   mounted() {
@@ -27,12 +28,28 @@ export default {
     ...mapGetters([
       'firstLevel',
       'secondLevel',
-      'articleTitle'
-    ])
+      'articleTitle',
+      'curBread'
+    ]),
   },
   methods: {
     getList() {
       this.$store.dispatch('GetList')
+      this.$store.dispatch('GetCurBread')
+    },
+    curSecondLevel(name) {
+      return this.secondLevel.filter(el => el.meta.type === name)
+    },
+    curArticleTitle(name) {
+      let articles = this.articleTitle.filter(el => el.meta.type === name)
+      return articles.slice(0, 5)
+    },
+    show() {
+      console.log('this.firstLevel', this.firstLevel)
+      console.log('this.secondLevel', this.secondLevel)
+      console.log('this.articleTitle', this.articleTitle)
+      console.log('this.curBread', this.curBread)
+      // console.log('this.curSecondLevel', this.curSecondLevel('puChuang'))
     }
   }
 }
@@ -40,14 +57,14 @@ export default {
 
 <style scoped lang="scss">
 @import '../../styles/variables.scss';
-.titleBlock {
-  margin: 0 10px;
+
+.app-container {
   line-height: 25px;
   .first-title {
     background-color: $themeBg;
     height: 25px;
     margin: 3px 0;
-    padding: 0 10px;
+    padding: 0 6px;
     font-weight: 600;
   }
   .second-title {
@@ -56,6 +73,16 @@ export default {
     .second-item {
       padding: 0 10px;
       width: 50%;
+      &:nth-child(odd) {
+        .article-title {
+          color: $ttColor;
+        }
+      }
+      &:nth-child(even) {
+        .article-title {
+          color: $ttColor2;
+        }
+      }
     }
   }
 }

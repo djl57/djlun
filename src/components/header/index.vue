@@ -1,7 +1,6 @@
 <template>
-  <div class="nodejs">
-    node
-    <router-link to="/home">home</router-link>
+  <div class="app-container">
+    欢迎访问
   </div>
 </template>
 
@@ -23,5 +22,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.app-container {
+  height: 30px;
+  line-height: 30px;
+}
 </style>

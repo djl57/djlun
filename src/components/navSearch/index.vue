@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-search">
+  <div class="app-container">
     <div class="nav">
       <div class="scroll">
         <span v-for="item in firstLevel" :key="item.path">
@@ -37,20 +37,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.nav-search {
-  margin: 0 10px;
-  height: 70px;
+@import '../../styles/variables.scss';
+
+.app-container {
+  height: 60px;
   .nav, .search {
-    height: 35px;
-    line-height: 35px;
+    height: 30px;
+    line-height: 30px;
   }
   .nav {
     // overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
+    color: $ttColor;
     .scroll {
       white-space: nowrap;
       span {
-        padding: 0 10px;
+        padding-right: 10px;
       }
     }
   }

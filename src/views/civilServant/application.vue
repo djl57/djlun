@@ -1,5 +1,5 @@
 <template>
-  <div class="application">
+  <div class="app-container">
     shenlun 
     <router-link to="/home">home</router-link>
   </div>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.application {
+.app-container {
 
 }
 </style>

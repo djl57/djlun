@@ -1,0 +1,68 @@
+<template>
+  <div class="app-container">
+    <div class="second-title">
+      <div v-for="list in curSecondLevel" :key="list.title" class="second-item">
+        <router-link :to="list.path">【{{ list.meta.title }}>>】</router-link>
+        <div v-for="ele in curArticleTitle(list.name)" :key="ele.title">
+          <router-link :to="ele.path" class="article-title">{{ ele.meta.title }}</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  name: 'titleBlock',
+  mounted() {
+    this.getList()
+  },
+  computed: {
+    ...mapGetters([
+      'secondLevel',
+      'articleTitle',
+      'curBread'
+    ]),
+    curSecondLevel() {
+      return this.secondLevel.filter(el => el.meta.type === this.curBread[1].name)
+    }
+  },
+  methods: {
+    getList() {
+      this.$store.dispatch('GetList')
+      this.$store.dispatch('GetCurBread')
+    },
+    curArticleTitle(name) {
+      let articles = this.articleTitle.filter(el => el.meta.type === name)
+      return articles.slice(0, 5)
+    },
+  }
+}
+</script>
+
+<style scoped lang="scss">
+@import '../../styles/variables.scss';
+
+.app-container {
+  line-height: 25px;
+  .second-title {
+    display: flex;
+    flex-wrap: wrap;
+    .second-item {
+      padding: 0 10px;
+      width: 50%;
+      &:nth-child(odd) {
+        .article-title {
+          color: $ttColor;
+        }
+      }
+      &:nth-child(even) {
+        .article-title {
+          color: $ttColor2;
+        }
+      }
+    }
+  }
+}
+</style>
