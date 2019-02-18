@@ -3,5 +3,6 @@ export default {
   secondLevel: state => state.navbar.secondLevel,
   articleTitle: state => state.navbar.articleTitle,
   curArticle: state => state.navbar.curArticle,
-  curBread: state => state.navbar.curBread
+  curBread: state => state.navbar.curBread,
+  tags: state => state.tags.tags
 }

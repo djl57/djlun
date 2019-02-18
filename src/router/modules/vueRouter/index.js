@@ -1,12 +1,14 @@
-const vueRouter = {
-  path: '/vueRouter',
-  name: 'vueRouter',
-  component: () => import('@/views/home/firstTitle'),
-  meta: {
-    title: '路由',
-    level: 1
+const route = [
+  {
+    path: '/vueRouter',
+    name: 'vueRouter',
+    component: () => import('@/views/home/firstTitle'),
+    meta: {
+      title: '路由',
+      level: 1
+    }
   }
-}
+]
 // const morningRead = {
 //   path: '/morningRead',
 //   name: 'morningRead',
@@ -19,5 +21,5 @@ const vueRouter = {
 // }
 
 export {
-  vueRouter,
+  route,
 }

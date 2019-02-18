@@ -3,7 +3,8 @@
     <div class="home-main">
       <div class="home-icon">
         <svg-icon :icon-class="iconClass" />
-        <span>Today is {{iconClass}}.</span>
+        <span class="home-left">Today is {{iconClass}}.</span>
+        <!-- <span class="home-right">SUMMARY</span> -->
       </div>
       <nav-search></nav-search>
       <msg-roll></msg-roll>
@@ -50,8 +51,12 @@ export default {
     .svg-icon {
       vertical-align: middle;
     }
-    span {
-      padding-left: 10px;
+    .home-left {
+      padding-left: 5px;
+    }
+    .home-right {
+      float: right;
+      padding-right: 5px;
     }
   }
 }

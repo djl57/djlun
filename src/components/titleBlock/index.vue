@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container" @click="show">
+  <div class="app-container">
     <div v-for="item in firstLevel" :key="item.title" v-show="item.path !== '/home'">
       <div class="first-title">
         <router-link :to="item.path">{{ item.meta.title }}</router-link>
@@ -43,13 +43,6 @@ export default {
     curArticleTitle(name) {
       let articles = this.articleTitle.filter(el => el.meta.type === name)
       return articles.slice(0, 5)
-    },
-    show() {
-      console.log('this.firstLevel', this.firstLevel)
-      console.log('this.secondLevel', this.secondLevel)
-      console.log('this.articleTitle', this.articleTitle)
-      console.log('this.curBread', this.curBread)
-      // console.log('this.curSecondLevel', this.curSecondLevel('puChuang'))
     }
   }
 }
@@ -74,6 +67,16 @@ export default {
       padding: 0 10px;
       width: 50%;
       &:nth-child(odd) {
+        position: relative;
+        &::after {
+          content: '';
+          width: 1px;
+          position: absolute;
+          top: 28px;
+          right: 0;
+          bottom: 3px;
+          background-color: rgba(187, 187, 187, 0.6);
+        }
         .article-title {
           color: $ttColor;
         }

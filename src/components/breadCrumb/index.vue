@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <span v-for="item in curBread" :key="item.name" class="breadCrumb-item">
-      <router-link :to="item.path">{{ item.meta.title }}</router-link>
+      <router-link :to="item.path" :class="{'color': item.children}">{{ item.meta.title }}</router-link>
     </span> 
   </div>
 </template>

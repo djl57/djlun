@@ -1,56 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { home } from './modules/home'
-import { javascript } from './modules/javascript'
-import { css } from './modules/css'
-import { html } from './modules/html'
-import { vuejs } from './modules/vuejs'
-import { vueRouter } from './modules/vueRouter'
-import { nodejs } from './modules/nodejs'
-import { 
-  civilServant,
-  AAT,
-  application,
-  baseIntro,
-  intro1 } from './modules/civilServant'
-import { 
-  puChuang,
-  morningRead,
-  sixAdvances,
-  daxue } from './modules/puChuang'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'page',
-      component: () => import(/* webpackChunkName: "home" */ '@/views/page/page')
-    },
-    home,
+// 来自 https://github.com/wuchangming/blog/blob/master/docs/webpack/require-context-usage.md
+// 新建模块只需要在modules中新建一个文件夹，文件夹下有一个index.js文件
+let res = (r => {
+  return r.keys().map(key => r(key));
+})(require.context('./', true, /^\.\/modules\/((?!\/)[\s\S])+\/index\.js$/))
 
-    javascript,
+let routes = [{
+  path: '/',
+  name: 'page',
+  component: () => import(/* webpackChunkName: "home" */ '@/views/page/page')
+},
+{
+  path: '/home',
+  name: 'home',
+  component: () => import('@/views/home/home'),
+  meta: {
+    title: '首页',
+    level: 1
+  }
+}]
 
-    css,
-
-    html,
-
-    vuejs,
-
-    vueRouter,
-
-    nodejs,
-
-    civilServant,
-    AAT,
-    application,
-    baseIntro,
-    intro1,
-
-    puChuang,
-    morningRead,
-    sixAdvances,
-    daxue
-  ]
+res.forEach(el => {
+  el.route.forEach(route => {
+    routes.push(route)
+  })
 })
+
+const router = new Router({
+  routes: routes
+})
+
+export default router

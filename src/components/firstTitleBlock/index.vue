@@ -53,6 +53,16 @@ export default {
       padding: 0 10px;
       width: 50%;
       &:nth-child(odd) {
+        position: relative;
+        &::after {
+          content: '';
+          width: 1px;
+          position: absolute;
+          top: 28px;
+          right: 0;
+          bottom: 3px;
+          background-color: rgba(187, 187, 187, 0.6);
+        }
         .article-title {
           color: $ttColor;
         }
