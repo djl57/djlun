@@ -1,0 +1,10 @@
+{
+  "tagName": "link",
+  "content": "<link>",
+  "action": "",
+  "prop": [],
+  "desc": [
+    "        给站点添加自定义图标 - &lt;link rel='shortcut icon' href='favicon.ico' type='image/x-icon'&gt;",
+    "        引入外部css - &lt;link rel='stylesheet' href='my-css-file.css'&gt;"
+  ]
+}

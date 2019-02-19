@@ -7,7 +7,7 @@
       <div class="second-title">
         <div v-for="list in curSecondLevel(item.name)" :key="list.title" class="second-item">
           <router-link :to="list.path">【{{ list.meta.title }}>>】</router-link>
-          <div v-for="ele in curArticleTitle(list.name)" :key="ele.title">
+          <div v-for="ele in curArticleTitle(list.name)" :key="ele.title" class="ellipsis">
             <router-link :to="ele.path" class="article-title">{{ ele.meta.title }}</router-link>
           </div>
         </div>
@@ -85,6 +85,9 @@ export default {
         .article-title {
           color: $ttColor2;
         }
+      }
+      .article-title {
+        width: 100%;
       }
     }
   }

@@ -1,0 +1,9 @@
+{
+  "tagName": "em",
+  "content": "<em><em/>",
+  "action": "强调（样式表现为斜体）",
+  "prop": [],
+  "desc": [
+    "        <em>这是一句强调的话</em>"
+  ]
+}

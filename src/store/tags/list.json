@@ -1,7 +1,0 @@
-{
-  "tagName": "list",
-  "content": "<ul> <li></li> </ul>  <ol> <li></li> </ol>",
-  "action": "无序列表，有序列表",
-  "prop": [],
-  "desc": []
-}

@@ -4,5 +4,6 @@ export default {
   articleTitle: state => state.navbar.articleTitle,
   curArticle: state => state.navbar.curArticle,
   curBread: state => state.navbar.curBread,
-  tags: state => state.tags.tags
+  tags: state => state.tags.tags,
+  formTags: state => state.tags.formTags
 }

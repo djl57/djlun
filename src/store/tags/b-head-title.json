@@ -1,0 +1,9 @@
+{
+  "tagName": "title",
+  "content": "<title><title/>",
+  "action": "head 元数据之一",
+  "prop": [],
+  "desc": [
+    "        嵌套在 head 标签中，用来给 html 文档添加一个标题。"
+  ]
+}

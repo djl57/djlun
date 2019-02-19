@@ -1,7 +1,0 @@
-{
-  "tagName": "img",
-  "content": "<img />",
-  "action": "显示图像",
-  "prop": ["src=' 图像文件路径 '", "alt=' 图像不可见时的文字描述 '"],
-  "desc": ["了解<a href='https://developer.mozilla.org/zh-CN/docs/learn/Accessibility' style='color: #0000ee;'>无障碍访问</a>"]
-}

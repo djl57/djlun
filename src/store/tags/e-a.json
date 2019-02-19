@@ -1,0 +1,22 @@
+{
+  "tagName": "a",
+  "content": "<a><a/>",
+  "action": "链接跳转",
+  "prop": [
+    "href=' 要跳转的链接 '",
+    "title=' 鼠标悬停时显示的文字 '（移动端不生效）",
+    "download=' 下载的文件默认名（包括文件类型）， '"
+  ],
+  "desc": [
+    "        如果网址开始部分省略了 https:// 或者 http://，可能会得到错误的结果。",
+    "        <a href='https://www.baidu.com' title='点击将跳转到百度搜索页'>百度（移动端不生效）</a>",
+    "        a 标签内可嵌套 img 标签。",
+    "        a 标签的链接可以是一个 id 属性。href='#id-name'",
+    "        当 a 标签的链接指向一个 word 或 pdf 时，会下载这个文件",
+    "        电子邮件链接：href='mailto:nowhere@mozilla.org'，点击时会自动调出系统邮件客户端。",
+    "        nowhere@mozilla.org不设也可以，那么收件人会是空，主题(subject)、抄送(cc)和主体(body)",
+    "        href='mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email'",
+    "        每个字段的值必须是URL编码的。 也就是说，不能有非打印字符（不可见字符比如制表符、换行符、分页符）和空格",
+    "        使用问号（?）来分隔主URL与参数值，以及使用&符来分隔mailto:中的各个参数。"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "tagName": "samp",
+  "content": "<samp><samp/>",
+  "action": "计算机程序输出",
+  "prop": [],
+  "desc": [
+    "<samp>PING mozilla.org (63.245.215.20): 56 data bytes</samp>"
+  ]
+}

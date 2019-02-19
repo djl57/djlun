@@ -4,7 +4,7 @@ const index = [
     name: 'htmlBase',
     component: () => import('@/views/html/base'),
     meta: {
-      title: 'html基础',
+      title: 'html 基础',
       type: 'htmlIntro'
     },
     redirect: '/htmlBase/htmlBaseIndex',
@@ -21,7 +21,7 @@ const index = [
     name: 'htmlTags',
     component: () => import('@/views/html/base'),
     meta: {
-      title: 'html标签大全',
+      title: 'html 基础标签',
       type: 'htmlIntro'
     },
     redirect: '/htmlTags/htmlTagsIndex',
@@ -34,6 +34,44 @@ const index = [
       {
         path: ':tagName',
         component: () => import('@/views/html/tags')
+      }
+    ]
+  },
+  {
+    path: '/htmlFormTags',
+    name: 'htmlFormTags',
+    component: () => import('@/views/html/base'),
+    meta: {
+      title: 'html 表单标签和表格标签',
+      type: 'htmlIntro'
+    },
+    redirect: '/htmlFormTags/htmlFormTagsIndex',
+    children: [
+      {
+        path: 'htmlFormTagsIndex',
+        name: 'htmlFormTagsIndex',
+        component: () => import('@/views/html/htmlFormTags')
+      }
+      // {
+      //   path: ':tagName',
+      //   component: () => import('@/views/html/tags')
+      // }
+    ]
+  },
+  {
+    path: '/htmlSemantization',
+    name: 'htmlSemantization',
+    component: () => import('@/views/html/base'),
+    meta: {
+      title: 'html 语义化',
+      type: 'htmlIntro'
+    },
+    redirect: '/htmlSemantization/htmlSemantizationIndex',
+    children: [
+      {
+        path: 'htmlSemantizationIndex',
+        name: 'htmlSemantizationIndex',
+        component: () => import('@/views/html/htmlSemantization')
       }
     ]
   }

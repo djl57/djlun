@@ -1,0 +1,10 @@
+{
+  "tagName": "figure",
+  "content": "<figure><figure/>",
+  "action": "语义容器",
+  "prop": [],
+  "desc": [
+    "figure 可以包裹几张图片、一段代码、音视频、方程、表格或别的",
+    "&lt;figcaption&gt; 包裹的内容的文字说明 &lt;figcaption/&gt;"
+  ]
+}

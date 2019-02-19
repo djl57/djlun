@@ -1,0 +1,9 @@
+{
+  "tagName": "aside",
+  "content": "<aside><aside/>",
+  "action": "侧边栏",
+  "prop": [],
+  "desc": [
+    "        经常嵌套在 &lt;main&gt; 中."
+  ]
+}

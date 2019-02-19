@@ -7,9 +7,9 @@
         </span>
       </div>
     </div>
-    <div class="search">
+    <!-- <div class="search">
       搜索
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
 @import '../../styles/variables.scss';
 
 .app-container {
-  height: 60px;
+  // height: 60px;
   .nav, .search {
     height: 30px;
     line-height: 30px;

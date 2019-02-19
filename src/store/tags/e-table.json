@@ -1,0 +1,7 @@
+{
+  "tagName": "table",
+  "content": "<table><tr><td><td></tr><table/>",
+  "action": "表格",
+  "prop": [],
+  "desc": []
+}

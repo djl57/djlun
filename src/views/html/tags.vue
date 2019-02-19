@@ -1,11 +1,11 @@
 <template>
   <div>
     <ul class="tags">
-      <div>标签名：{{ tagsRes[0].tagName }}</div>
-      <div>作用：{{ tagsRes[0].action }}</div>
-      <div>属性：</div>
-      <p v-for="(item, index) in tagsRes[0].prop" :key="item">{{ index+1 }}、{{ item }}</p>
-      <div>描述: </div>
+      <div><span class="bold">标签名：</span>{{ tagsRes[0].content }}</div>
+      <div><span class="bold">作用：</span>{{ tagsRes[0].action }}</div>
+      <div><span class="bold">属性：</span></div>
+      <p v-for="(item, index) in tagsRes[0].prop" :key="item"> {{ index+1 }}、{{ item }}</p>
+      <div><span class="bold">描述：</span></div>
       <p v-for="item in tagsRes[0].desc" :key="item" v-html="item"></p>
     </ul>
   </div>

@@ -1,0 +1,9 @@
+{
+  "tagName": "section",
+  "content": "<section><section/>",
+  "action": "一个区域",
+  "prop": [],
+  "desc": [
+    "        一般通过是否包含一个标题 (&lt;h1&gt;-&lt;h6&gt; element) 作为子节点 来 辨识每一个&lt;section&gt;。"
+  ]
+}

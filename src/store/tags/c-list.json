@@ -1,0 +1,9 @@
+{
+  "tagName": "list",
+  "content": "<ul> <li></li> </ul>  <ol> <li></li> </ol>",
+  "action": "列表",
+  "prop": [],
+  "desc": [
+    "        ul： 无序列表；ol： 有序列表。列表可嵌套列表。"
+  ]
+}

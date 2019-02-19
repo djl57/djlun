@@ -1,0 +1,11 @@
+{
+  "tagName": "html",
+  "content": "<html><html/>",
+  "action": "头标签",
+  "prop": [
+    "lang"
+  ],
+  "desc": [
+    "为文档设定主语言 - &lt;html lang='en-US'&gt;"
+  ]
+}

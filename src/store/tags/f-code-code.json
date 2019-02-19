@@ -1,0 +1,10 @@
+{
+  "tagName": "code",
+  "content": "<code><code/>",
+  "action": "显示代码",
+  "prop": [
+  ],
+  "desc": [
+    "<code>var para = document.querySelector('p');</code>"
+  ]
+}

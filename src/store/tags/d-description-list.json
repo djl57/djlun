@@ -1,0 +1,12 @@
+{
+  "tagName": "description-list",
+  "content": "<dl><dt><dd></dd></dt><dl/>",
+  "action": "描述列表",
+  "prop": [],
+  "desc": [
+    "        dl: description list（描述列表）;",
+    "        dt: description term（描述列表的描述术语）;",
+    "        dd: description description（描述列表的描述部分）",
+    "        一个术语 dt 可以同时有多个描述 dd "
+  ]
+}

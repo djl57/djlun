@@ -7,7 +7,7 @@
         <!-- <span class="home-right">SUMMARY</span> -->
       </div>
       <nav-search></nav-search>
-      <msg-roll></msg-roll>
+      <!-- <msg-roll></msg-roll> -->
       <title-block></title-block>
     </div>
     <v-footer></v-footer>
@@ -17,7 +17,7 @@
 <script>
 import icons from './getIcons'
 import NavSearch from '@/components/navSearch'
-import MsgRoll from '@/components/msgRoll'
+// import MsgRoll from '@/components/msgRoll'
 import TitleBlock from '@/components/titleBlock'
 import VFooter from '@/components/vFooter'
   
@@ -25,7 +25,7 @@ export default {
   name: 'home',
   components: {
     NavSearch,
-    MsgRoll,
+    // MsgRoll,
     TitleBlock,
     VFooter
   },

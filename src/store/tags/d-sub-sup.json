@@ -1,0 +1,9 @@
+{
+  "tagName": "sub-sup",
+  "content": "<sub><sub/> <sup></sup>",
+  "action": "下标上标",
+  "prop": [],
+  "desc": [
+    "        x<sub>2</sub>; A<sup>2</sup>"
+  ]
+}

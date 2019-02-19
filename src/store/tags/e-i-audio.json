@@ -1,0 +1,16 @@
+{
+  "tagName": "audio",
+  "content": "<audio><audio/>",
+  "action": "音频",
+  "prop": [
+    "src='视频链接'",
+    "controls（控制）",
+    "autoplay（自动播放）",
+    "loop（循环播放）",
+    "muted（关闭声音）",
+    "preload='none（不缓冲）；auto（页面加载后缓存媒体文件）；metadata（仅缓冲文件的元数据）'"
+  ],
+  "desc": [
+    "        可以使用 <track> 标签来添加字幕。"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "tagName": "script",
+  "content": "<script><script/>",
+  "action": "",
+  "prop": [],
+  "desc": [
+    "        引入js - &lt;script src='my-js-file.js'&gt;&lt;/script&gt; 放在文档的尾部（在 </body>标签之前）是一个更好的选择",
+    ""
+  ]
+}

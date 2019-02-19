@@ -1,0 +1,9 @@
+{
+  "tagName": "kbd",
+  "content": "<kbd><kbd/>",
+  "action": "电脑键盘输入",
+  "prop": [],
+  "desc": [
+    "        <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>"
+  ]
+}

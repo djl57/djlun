@@ -1,0 +1,10 @@
+{
+  "tagName": "strong",
+  "content": "<strong><strong/>",
+  "action": "非常重要（粗体）",
+  "prop": [],
+  "desc": [
+    "       <strong>这是一句非常重要的话。</strong>",
+    "       粗体的样式不要用它来显示。"
+  ]
+}

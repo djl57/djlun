@@ -16,6 +16,15 @@ const morningRead = [
       title: '大学开篇',
       type: 'morningRead'
     }
+  },
+  {
+    path: '/SevenPrinciplesOfAccounting',
+    name: 'SevenPrinciplesOfAccounting',
+    component: () => import('@/views/puChuang/morningBooks'),
+    meta: {
+      title: '会计七原则',
+      type: 'morningRead'
+    }
   }
 ]
 

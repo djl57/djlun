@@ -1,0 +1,9 @@
+{
+  "tagName": "main",
+  "content": "<main><main/>",
+  "action": "主要内容",
+  "prop": [],
+  "desc": [
+    "具有代表性的内容段落主题可以使用 &lt;article&gt;, &lt;section&gt;, 和 &lt;div&gt; 元素."
+  ]
+}

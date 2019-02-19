@@ -1,0 +1,15 @@
+{
+  "tagName": "quote",
+  "content": "<blockquote><blockquote/> <q></q>",
+  "action": "引用",
+  "prop": [
+    "cite='引用资源链接'"
+  ],
+  "desc": [
+    "        blockquote: 块引用;  表现为margin样式",
+    "        q: 行内引用;         表现为加了引号",
+    "此文档引用自<blockquote cite='https://developer.mozilla.org/zh-CN/docs/Learn/HTML'>mdn-html（块引用）</blockquote>",
+    "此文档引用自<q cite='https://developer.mozilla.org/zh-CN/docs/Learn/HTML'>mdn-html（行内引用）</q>",
+    "        cite 属性的内容听起来很有用，但浏览器、屏幕阅读器等等不会真的关心它，如果不使用JavaScript或CSS，浏览器不会显示cite的内容"
+  ]
+}

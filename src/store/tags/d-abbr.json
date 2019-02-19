@@ -1,0 +1,11 @@
+{
+  "tagName": "abbr",
+  "content": "<abbr><abbr/>",
+  "action": "缩写",
+  "prop": [
+    "title='缩写的全显'"
+  ],
+  "desc": [
+    "<abbr title='Hypertext Markup Language'>HTML</abbr> （移动端无效，因为需要鼠标移上去才有效果）"
+  ]
+}

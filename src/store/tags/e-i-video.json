@@ -1,0 +1,19 @@
+{
+  "tagName": "video",
+  "content": "<video><video/>",
+  "action": "视频",
+  "prop": [
+    "src='视频链接'",
+    "controls（控制）",
+    "autoplay（自动播放）",
+    "loop（循环播放）",
+    "muted（关闭声音）",
+    "poster='一张图片链接'（在视频未播放前显示，用于预览或广告）",
+    "preload='none（不缓冲）；auto（页面加载后缓存媒体文件）；metadata（仅缓冲文件的元数据）'",
+    "width='',height=''"
+  ],
+  "desc": [
+    "        video标签内包裹一个段落，可以在video不生效时显示。",
+    "        给那些听不懂音频语言的人们提供一个音频内容的副本, 可以使用 <track> 标签。"
+  ]
+}
