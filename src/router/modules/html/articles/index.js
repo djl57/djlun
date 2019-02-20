@@ -2,7 +2,7 @@ const index = [
   {
     path: '/htmlBase',
     name: 'htmlBase',
-    component: () => import('@/views/html/base'),
+    component: () => import('@/components/base'),
     meta: {
       title: 'html 基础',
       type: 'htmlIntro'
@@ -19,7 +19,7 @@ const index = [
   {
     path: '/htmlTags',
     name: 'htmlTags',
-    component: () => import('@/views/html/base'),
+    component: () => import('@/components/base'),
     meta: {
       title: 'html 基础标签',
       type: 'htmlIntro'
@@ -40,7 +40,7 @@ const index = [
   {
     path: '/htmlFormTags',
     name: 'htmlFormTags',
-    component: () => import('@/views/html/base'),
+    component: () => import('@/components/base'),
     meta: {
       title: 'html 表单标签和表格标签',
       type: 'htmlIntro'
@@ -61,7 +61,7 @@ const index = [
   {
     path: '/htmlSemantization',
     name: 'htmlSemantization',
-    component: () => import('@/views/html/base'),
+    component: () => import('@/components/base'),
     meta: {
       title: 'html 语义化',
       type: 'htmlIntro'

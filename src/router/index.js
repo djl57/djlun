@@ -25,9 +25,9 @@ let routes = [{
 }]
 
 res.forEach(el => {
-  el.route.forEach(route => {
+  el.route ? el.route.forEach(route => {
     routes.push(route)
-  })
+  }) : null
 })
 
 const router = new Router({

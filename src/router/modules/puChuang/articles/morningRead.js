@@ -25,6 +25,15 @@ const morningRead = [
       title: '会计七原则',
       type: 'morningRead'
     }
+  },
+  {
+    path: '/twelveOperations',
+    name: 'twelveOperations',
+    component: () => import('@/views/puChuang/morningBooks'),
+    meta: {
+      title: '经营十二条',
+      type: 'morningRead'
+    }
   }
 ]
 
