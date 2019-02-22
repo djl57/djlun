@@ -12,7 +12,7 @@ const jsInterview = [
       {
         path: 'jsCopyIndex',
         name: 'jsCopyIndex',
-        component: () => import('@/views/javascript/jsCopy')
+        component: () => import('@/views/javascript/jsInterview/jsCopy')
       }
     ]
   }

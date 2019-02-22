@@ -1,11 +1,23 @@
-.fade-enter-active {
-  transition: all .5s;
+.slide-right-enter-active {
+  transition: all .75s;
 }
 
-.fade-enter {
+.slide-right-enter {
   transform: translateX(375px);
 }
 
-.fade-enter-to {
+.slide-right-enter-to {
+  transform: translateX(0);
+}
+
+.slide-bottom-enter-active {
+  transition: all 0.8s;
+}
+
+.slide-bottom-enter {
+  transform: translateY(700px);
+}
+
+.slide-bottom-enter-to {
   transform: translateX(0);
 }

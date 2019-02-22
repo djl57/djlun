@@ -2,6 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
+let [index, htmlGeneralKnowledge] = res
 
 let route = [
   {
@@ -23,7 +24,18 @@ let route = [
       type: 'html'
     }
   },
-  ...res[0]
+  {
+    path: '/htmlGeneralKnowledge',
+    name: 'htmlGeneralKnowledge',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: 'html小常识',
+      level: 2,
+      type: 'html'
+    }
+  },
+  ...index,
+  ...htmlGeneralKnowledge
 ]
 
 export {

@@ -49,9 +49,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.html-semantization {
-  padding: 10px;
-}
-</style>

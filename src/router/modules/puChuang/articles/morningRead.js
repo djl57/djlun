@@ -34,6 +34,15 @@ const morningRead = [
       title: '经营十二条',
       type: 'morningRead'
     }
+  },
+  {
+    path: '/analectsLearning',
+    name: 'analectsLearning',
+    component: () => import('@/views/puChuang/morningBooks'),
+    meta: {
+      title: '论语·学而',
+      type: 'morningRead'
+    }
   }
 ]
 

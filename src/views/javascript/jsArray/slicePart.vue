@@ -48,10 +48,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.slicePart {
-  padding-bottom: 10px;
-  line-height: 1.5em;
-}
-</style>

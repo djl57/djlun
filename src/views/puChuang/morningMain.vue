@@ -27,6 +27,5 @@ export default {
 <style scoped lang="scss">
 .app-container {
   white-space: pre-wrap;
-  line-height: 2em;
 }
 </style>

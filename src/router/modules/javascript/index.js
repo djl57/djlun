@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [jsArray, jsInterview] = res
+let [jsArray, jsInterview, jsOptimization] = res
 
 const route = [
   {
@@ -12,6 +12,16 @@ const route = [
     meta: {
       title: 'javascript',
       level: 1
+    }
+  },
+  {
+    path: '/jsIntro',
+    name: 'jsIntro',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: '什么是javascript',
+      level: 2,
+      type: 'javascript'
     }
   },
   {
@@ -34,8 +44,19 @@ const route = [
       type: 'javascript'
     }
   },
+  {
+    path: '/jsOptimization',
+    name: 'jsOptimization',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: '性能',
+      level: 2,
+      type: 'javascript'
+    }
+  },
   ...jsArray,
-  ...jsInterview
+  ...jsInterview,
+  ...jsOptimization
 ]
 
 export {

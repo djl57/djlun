@@ -14,8 +14,8 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  name: 'titleBlock',
-  mounted() {
+  name: 'firstTitleBlock',
+  created() {
     this.getList()
   },
   computed: {
@@ -34,9 +34,8 @@ export default {
       this.$store.dispatch('GetCurBread')
     },
     curArticleTitle(name) {
-      let articles = this.articleTitle.filter(el => el.meta.type === name)
-      return articles.slice(0, 5)
-    },
+      return this.articleTitle.filter(el => el.meta.type === name)
+    }
   }
 }
 </script>
@@ -53,21 +52,22 @@ export default {
       padding: 0 10px;
       width: 50%;
       &:nth-child(odd) {
+        .article-title {
+          color: $ttColor;
+        }
+      }
+      &:nth-child(even) {
         position: relative;
         &::after {
           content: '';
           width: 1px;
           position: absolute;
           top: 28px;
-          right: 0;
+          left: 0;
           bottom: 3px;
+          transform: scaleX(0.5);
           background-color: rgba(187, 187, 187, 0.6);
         }
-        .article-title {
-          color: $ttColor;
-        }
-      }
-      &:nth-child(even) {
         .article-title {
           color: $ttColor2;
         }

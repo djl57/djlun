@@ -1,5 +1,5 @@
 <template>
-  <ul class="index">
+  <ul>
     <li v-for="item in tags" :key="item.tagName">
       <router-link :to="item.tagName">{{ item.content }} <span class="color2 index-item">{{ item.action }}</span></router-link>
     </li>

@@ -12,7 +12,7 @@ const jsArray = [
       {
         path: 'slicePartIndex',
         name: 'slicePartIndex',
-        component: () => import('@/views/javascript/slicePart')
+        component: () => import('@/views/javascript/jsArray/slicePart')
       }
     ]
   }

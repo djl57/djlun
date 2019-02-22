@@ -2,6 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
+let [AAT, application, baseIntro, questionsAndScores] = res
 
 const route = [
   {
@@ -43,9 +44,22 @@ const route = [
       type: 'civilServant',
     }
   },
-  ...res[0]
+  {
+    path: '/questionsAndScores',
+    name: 'questionsAndScores',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: '试题及得分',
+      level: 2,
+      type: 'civilServant',
+    }
+  },
+  ...AAT,
+  ...application,
+  ...baseIntro,
+  ...questionsAndScores
 ]
 
-// export {
-//   route
-// }
+export {
+  route
+}

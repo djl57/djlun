@@ -25,11 +25,13 @@ let routes = [{
 }]
 
 res.forEach(el => {
-  el.route ? el.route.forEach(route => {
-    routes.push(route)
-  }) : null
+  if (el.route /* && el.route[0].name !== 'puChuang' */) {
+    el.route.forEach(route => {
+      routes.push(route)
+    })
+  }
 })
-
+// console.log(routes[1].component) // 返回的是一个promise
 const router = new Router({
   routes: routes
 })

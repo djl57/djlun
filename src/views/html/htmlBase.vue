@@ -75,7 +75,6 @@ export default {
 
 <style scoped lang="scss">
 .index {
-  line-height: 2em;
   white-space: pre-wrap;
 }
 </style>

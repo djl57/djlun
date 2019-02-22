@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
-    AAT
+    intro1
     <router-link to="/home">home</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AAT',
+  name: '',
   data() {
     return {
       
@@ -21,9 +21,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.app-container {
-  
-}
-</style>

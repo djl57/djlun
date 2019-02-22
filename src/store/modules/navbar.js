@@ -4,7 +4,11 @@ const articles = requireAll(req)
 
 import router from '@/router'
 
-export default {
+const routeFilter = (type, routes) => {
+  return routes.filter(el => type === el.name)
+}
+
+const navbar = {
   state: {
     firstLevel: [],
     secondLevel: [],
@@ -35,20 +39,33 @@ export default {
       state.curArticle = articles.filter(el => `/${el.name}` === window.location.href.split('#')[1])
     },
     GET_CUR_BREAD: state => {
-      state.curBread = state.firstLevel.filter(el => {
-        return window.location.href.split('#')[1].split('/')[1] === el.name
-      })
-      if (state.curBread.length === 0) {
-        state.curBread = state.secondLevel.filter(el => {
-          return window.location.href.split('#')[1].split('/')[1] === el.name
-        })
+      /* 先判断当前页面是否是article
+      如果是，就把路由添加到curBread中，并且去副标题中找当前article的副标题
+      如果不是，判断当前页面是否是副标题
+      如果是，就把路由添加到curBread中，并且去标题中找当前副标题的标题
+      如果不是，判断当前页面是否是标题
+      如果是，就把标题添加到curBread中
+      如果不是，就是主页 */
+      // 关于这里是否需要递归？
+      const href = window.location.href.split('#')[1].split('/')[1]
+      let res = routeFilter(href, state.articleTitle)
+      if (res.length === 0) {
+        res = routeFilter(href, state.secondLevel)
+        if (res.length === 0) {
+          res = routeFilter(href, state.firstLevel)
+        } else {
+          let [{ meta }] = res
+          let firRes = routeFilter(meta.type, state.firstLevel)
+          res = [...firRes, ...res]
+        }
+      } else {
+        let [{ meta }] = res
+        let secRes = routeFilter(meta.type, state.secondLevel)
+        let firRes = routeFilter(secRes[0].meta.type, state.firstLevel)
+        res = [...firRes, ...secRes, ...res]
       }
-      if (state.curBread.length === 0) {
-        state.curBread = state.articleTitle.filter(el => {
-          return window.location.href.split('#')[1].split('/')[1] === el.name
-        })
-      }
-      state.curBread.unshift({path: '/home', meta: { title: '首页' }})
+      res.unshift({path: '/home', meta: { title: '首页' }})
+      state.curBread = res
     }
   },
   actions: {
@@ -57,3 +74,5 @@ export default {
     GetCurBread: ({ commit }) => commit('GET_CUR_BREAD')
   },
 }
+
+export default navbar

@@ -28,7 +28,6 @@ export default {
 
 <style scoped lang="scss">
 .tags {
-  line-height: 1.5em;
   white-space: pre-wrap;
   margin: 5px;
 }

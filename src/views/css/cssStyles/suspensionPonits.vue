@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../styles/mixin.scss';
+@import '../../../styles/mixin.scss';
 .suspensionPoints {
   padding-bottom: 10px;
   line-height: 1.5em;

@@ -11,7 +11,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'secondTitleBlock',
-  mounted() {
+  created() {
     this.getList()
   },
   computed: {
@@ -20,8 +20,8 @@ export default {
       'curBread'
     ]),
     curArticleTitle() {
-      let articles = this.articleTitle.filter(el => el.meta.type === this.curBread[1].name)
-      return articles.slice(0, 5)
+      const len = this.curBread.length - 1
+      return this.articleTitle.filter(el => el.meta.type === this.curBread[len].name).slice(0, 10)
     },
   },
   methods: {

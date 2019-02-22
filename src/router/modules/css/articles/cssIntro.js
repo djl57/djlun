@@ -12,7 +12,7 @@ const cssIntro = [
       {
         path: 'cssBaseIndex',
         name: 'cssBaseIndex',
-        component: () => import('@/views/html/htmlBase')
+        component: () => import('@/views/css/cssIntro/cssBase')
       }
     ]
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <span v-for="item in curBread" :key="item.name" class="breadCrumb-item">
-      <router-link :to="item.path" :class="{'color': item.children}">{{ item.meta.title }}</router-link>
+      <router-link :to="item.path" class="color"><span class="title">{{ item.meta.title }}</span></router-link>
     </span> 
   </div>
 </template>
@@ -15,9 +15,6 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'firstLevel',
-      'secondLevel',
-      'articleTitle',
       'curBread'
     ])
   },
@@ -39,14 +36,18 @@ export default {
   padding-left: 6px;
   background-color: $themeBg;
   .breadCrumb-item {
-    &:first-child {
-      color: $ttColor;
-    }
-    &:last-child {
-      &::before {
+    &:not(:last-child) {
+      &::after {
         content: ' / '
       }
     }
+    // .title {
+    //   display: inline-block;
+    //   width: 20%;
+    //   overflow: hidden;
+    //   white-space: nowrap;
+    //   text-overflow: ellipsis;
+    // }
   }
 }
 </style>
