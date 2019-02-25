@@ -1,5 +1,39 @@
 const cssStyles = [
   {
+    path: '/cssTransformMatrix',
+    name: 'cssTransformMatrix',
+    component: () => import('@/components/base'),
+    meta: {
+      title: 'transform: matrix()',
+      type: 'cssStyles'
+    },
+    redirect: '/cssTransformMatrix/cssTransformMatrixIndex',
+    children: [
+      {
+        path: 'cssTransformMatrixIndex',
+        name: 'cssTransformMatrixIndex',
+        component: () => import('@/views/css/cssStyles/cssTransformMatrix')
+      }
+    ]
+  },
+  {
+    path: '/cssFlex',
+    name: 'cssFlex',
+    component: () => import('@/components/base'),
+    meta: {
+      title: 'flex',
+      type: 'cssStyles'
+    },
+    redirect: '/cssFlex/cssFlexIndex',
+    children: [
+      {
+        path: 'cssFlexIndex',
+        name: 'cssFlexIndex',
+        component: () => import('@/views/css/cssStyles/cssFlex')
+      }
+    ]
+  },
+  {
     path: '/suspensionPonits',
     name: 'suspensionPonits',
     component: () => import('@/components/base'),
@@ -81,23 +115,6 @@ const cssStyles = [
         path: 'cssArrowIndex',
         name: 'cssArrowIndex',
         component: () => import('@/views/css/cssStyles/cssArrow')
-      }
-    ]
-  },
-  {
-    path: '/cssTransformMatrix',
-    name: 'cssTransformMatrix',
-    component: () => import('@/components/base'),
-    meta: {
-      title: 'transform: matrix()',
-      type: 'cssStyles'
-    },
-    redirect: '/cssTransformMatrix/cssTransformMatrixIndex',
-    children: [
-      {
-        path: 'cssTransformMatrixIndex',
-        name: 'cssTransformMatrixIndex',
-        component: () => import('@/views/css/cssStyles/cssTransformMatrix')
       }
     ]
   },

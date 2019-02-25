@@ -17,6 +17,9 @@
   .color2 {
     color: $ttColor2;
   }
+  .err {
+    color: #f00;
+  }
   .index {
     line-height: 2em;
     white-space: pre-wrap;
@@ -28,6 +31,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .flex {
+    display: flex;
   }
   .border-top {
     @include border-top(rgba(187, 187, 187, 0.6));

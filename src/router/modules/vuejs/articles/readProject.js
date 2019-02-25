@@ -15,7 +15,24 @@ const readProject = [
         component: () => import('@/views/vuejs/readProject/projectOne')
       },
     ]
-  }
+  },
+  {
+    path: '/projectTwo',
+    name: 'projectTwo',
+    component: () => import('@/components/base'),
+    meta: {
+      title: 'SSR博客网站',
+      type: 'readProject'
+    },
+    redirect: '/projectTwo/projectTwoIndex',
+    children: [
+      {
+        path: 'projectTwoIndex',
+        name: 'projectTwoIndex',
+        component: () => import('@/views/vuejs/readProject/projectTwo')
+      },
+    ]
+  },
 ]
 export {
   readProject

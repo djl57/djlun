@@ -21,7 +21,7 @@ export default {
     return {
       left: ['UI来源', '代码编写'],
       right: ['晋江文学城', 'djlun'],
-      count: 3,
+      count: 1,
       time: null
     }
   },

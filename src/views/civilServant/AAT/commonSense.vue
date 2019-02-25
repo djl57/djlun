@@ -1,39 +1,16 @@
 <template>
   <div class="app-container">
-    commonSense
+    放弃
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
-  name: '',
+  name: 'commonSense',
   data() {
     return {
-      
-    }
-  },
-  components: {
-    
-  },
-  mounted() {
-    this.getList()
-  },
-  computed: {
-    ...mapGetters([
-      'firstLevel',
-      'secondLevel',
-      'articleTitle'
-    ])
-  },
-  methods: {
-    getList() {
-      this.$store.dispatch('GetList')
+      createTime: '2019-02-25 09:00:00'
     }
   }
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>
