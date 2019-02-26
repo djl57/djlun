@@ -1,5 +1,5 @@
 <template>
-  <article class="js-copy">
+  <article class="app-box">
     <header>
       <h1>js 克隆</h1>
     </header>

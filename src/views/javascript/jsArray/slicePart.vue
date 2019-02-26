@@ -1,5 +1,5 @@
 <template>
-  <article class="slicePart">
+  <article class="app-box">
     <header>
       <h1>需求：截取数组的一部分</h1>
     </header>

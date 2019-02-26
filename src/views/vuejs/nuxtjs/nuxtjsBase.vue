@@ -1,13 +1,13 @@
 <template>
-  <div class="app-container">
-    <aside :class="aside? 'aside':'none-aside'">
+  <div>
+    <!-- <aside :class="aside? 'aside':'none-aside'">
       <h1 @click="showAside">{{ catalog }}</h1>
       <ol>
         <li v-for="item in catalogs" :key="item.id">
           <a :href="'#'+item.id">{{ item.text }}</a>
         </li>
       </ol>
-    </aside>
+    </aside> -->
     <table>
       <tr>
         <th>别名</th>

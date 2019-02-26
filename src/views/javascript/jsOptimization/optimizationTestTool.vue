@@ -1,5 +1,5 @@
 <template>
-  <article class="optimization-test-tool">
+  <article class="app-box">
     <header>
       <h1>js 性能测试工具</h1>
     </header>
