@@ -52,10 +52,6 @@ const index = [
         name: 'htmlFormTagsIndex',
         component: () => import('@/views/html/htmlFormTags')
       }
-      // {
-      //   path: ':tagName',
-      //   component: () => import('@/views/html/tags')
-      // }
     ]
   },
   {

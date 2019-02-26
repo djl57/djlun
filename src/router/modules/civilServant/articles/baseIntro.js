@@ -16,6 +16,23 @@ const baseIntro = [
       }
     ]
   },
+  {
+    path: '/intro2',
+    name: 'intro2',
+    component: () => import('@/components/base'),
+    meta: {
+      title: '考试技巧',
+      type: 'baseIntro'
+    },
+    redirect: '/intro2/intro2Index',
+    children: [
+      {
+        path: 'intro2Index',
+        name: 'intro2Index',
+        component: () => import('@/views/civilServant/baseIntro/intro2')
+      }
+    ]
+  },
 ]
 export {
   baseIntro

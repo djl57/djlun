@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [jsArray, jsInterview, jsOptimization] = res
+let [jsIntro, jsArray, jsInterview, jsOptimization] = res
 
 const route = [
   {
@@ -54,6 +54,7 @@ const route = [
       type: 'javascript'
     }
   },
+  ...jsIntro,
   ...jsArray,
   ...jsInterview,
   ...jsOptimization

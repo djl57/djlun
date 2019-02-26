@@ -1,5 +1,5 @@
 <template>
-  <article class="app-container">
+  <article class="app-box">
     <header>
       <h1>移动端1px直线</h1>
     </header>

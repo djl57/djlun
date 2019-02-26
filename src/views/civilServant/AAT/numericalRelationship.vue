@@ -1,11 +1,11 @@
 <template>
   <article class="app-box" ref="article">
-    <header @click="showNav">
+    <header @click="showNav" class="catalog-to-top">
       <h1>目录</h1>
     </header>
     <nav>
-      <div><span class="bold">题量：</span> 10 - 15</div>
-      <div><span class="bold">分值：</span> </div>
+      <div><span class="bold">题量：</span>15</div>
+      <div><span class="bold">分值：</span>15 * 0.8 = 12</div>
       <div class="bold">三大方法：</div>
       <ol>
         <li v-for="item in fns" :key="item.href">
@@ -105,9 +105,56 @@
       </section>
       <section :id="pros[0].id">
         <h2>{{pros[0].content}}</h2>
+        <p>总量 = 效率 * 时间</p>
+        <section>
+          <h3>给 完工时间 型</h3>
+          <p>知道 每个人的完工时间 或 两个人一起的完工时间</p>
+          <div class="bold">解题步骤：</div>
+          <ol>
+            <li>找总量，无总量就假设总量（值为每个人完工时间的公倍数）</li>
+            <div class="bold">求总的时间（知道每个人的完工时间）：</div>
+            <li>算每个人的效率：总量 / 每个人的时间</li>
+            <li>总的效率 = 每个人的效率相加</li>
+            <li>总的时间 = 总量 / 总的效率</li>
+            <div class="bold">求每个人的效率之比（知道两个人一起的完工时间）：</div>
+            <li>算两个人的效率：总量 / 两个人一起的完工时间</li>
+            <li>将答案代入，比如甲乙一起效率为:5，乙丙一起效率为3，答案为甲乙丙3:2:1,3+2：2+1 = 5:3，正确，然后代入其他都不正确，则答案确定。</li>
+          </ol>
+          <p class="err">有时候题目问的是大约几天，然后算出来的天数是一个小数，但是答案给的都是整数。那么如果算出来21~22，就选22。</p>
+          <h3>给 效率比例 型</h3>
+          <div class="bold">解题步骤：</div>
+          <ol>
+            <li>假设效率</li>
+            <li>求总量</li>
+            <li>根据题目列方程</li>
+          </ol>
+          <div class="bold">因为什么原因停工的题：</div>
+          <p>比如工期30天，因为下雨停工10天，剩下的需要在8天内完成，那就是相当于原来18天的工作量，现在要8天完成，由此可以列式子。</p>
+          <p class="err">工程问题最重要的是 设出或算出 效率 和 总量，然后根据效率和总量列式子。</p>
+          <h3>给 具体单位 型</h3>
+          <p>比如总量多少份，多少个</p>
+          <p>采用 设未知数，列方程 的方法</p>
+        </section>
       </section>
       <section :id="pros[1].id">
         <h2>{{pros[1].content}}</h2>
+        <p>路程 = 速度 * 时间</p>
+        <h3>基础行程</h3>
+        <p>能用倍数特性排除的就用倍数特性先排除试试。比如题目求三天共行驶了多少公里，题目中已知三天共行驶了18个小时，那么答案肯定是18的倍数，就可以去答案中排除试试。</p>
+        <div class="bold">公式：</div>
+        <ol>
+          <li>平均速度：v = x / t</li>
+          <li>等距离平均速度：v = S<sub>总</sub>/T<sub>总</sub> = 2v<sub>1</sub>v<sub>2</sub> / v<sub>1</sub> + v<sub>2</sub>（等距离两段、直线往返、上下坡往返）</li>
+          <li>直线相遇（两人同时相向而行）：S<sub>相遇</sub> = (v<sub>1</sub> + v<sub>2</sub>) * t；不是同时：</li>
+          <li>环形相遇（同点出发）：S<sub>相遇</sub> = (v<sub>1</sub> + v<sub>2</sub>) * t；相遇一次：S<sub>相遇</sub> = 1圈；相遇n次，S<sub>相遇</sub> = n圈</li>
+          <li>直线追及（两人同时同向而行）：S<sub>追及</sub> = (v<sub>1</sub> - v<sub>2</sub>) * t = 追及刚开始时两人相差的距离；</li>
+          <li>环形追及（同点出发）：S<sub>追及</sub> = (v<sub>1</sub> - v<sub>2</sub>) * t；追上一次：S<sub>追及</sub> = 1圈；追上n次，S<sub>追及</sub> = n圈</li>
+        </ol>
+        <p class="err">遇上那种先跑几分钟，再跑几分钟，求再跑几分钟的题（陷阱题），可以直接在答案里猜，肯定有一个干扰项：总的时间；一个正确项：再跑几分钟；此两者肯定相差先跑+再跑的分钟数。</p>
+        
+        <h3>相对行程</h3>
+
+        <h3>比例行程</h3>
       </section>
       <section :id="pros[2].id">
         <h2>{{pros[2].content}}</h2>
@@ -181,22 +228,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-header {
-  position: fixed;
-  top: 50%;
-  right: 6px;
-  width: 50px;
-  height: 40px;
-  line-height: 20px;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 150, 136, 0.5);
-  border-radius: 8px;
-}
-.app-box {
-  height: calc(100vh - 150px);
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-</style>

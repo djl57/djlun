@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="app-box">
     <header>
       <h1>纯css画箭头</h1>
     </header>

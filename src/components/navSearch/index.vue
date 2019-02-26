@@ -46,7 +46,7 @@ export default {
     line-height: 30px;
   }
   .nav {
-    // overflow-y: hidden;
+    overflow-y: hidden;
     overflow-x: auto;
     color: $ttColor;
     .scroll {
@@ -55,9 +55,6 @@ export default {
         padding-right: 10px;
       }
     }
-  }
-  .search {
-
   }
 }
 </style>

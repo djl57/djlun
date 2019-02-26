@@ -43,6 +43,24 @@ const morningRead = [
       title: '论语·学而',
       type: 'morningRead'
     }
+  },
+  {
+    path: '/taoteching',
+    name: 'taoteching',
+    component: () => import('@/views/puChuang/morningBooks'),
+    meta: {
+      title: '道德经',
+      type: 'morningRead'
+    }
+  },
+  {
+    path: '/theMean',
+    name: 'theMean',
+    component: () => import('@/views/puChuang/morningBooks'),
+    meta: {
+      title: '中庸',
+      type: 'morningRead'
+    }
   }
 ]
 

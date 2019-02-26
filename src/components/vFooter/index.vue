@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <div>北京时间：{{ date }}</div>
-    <div>@djlun</div>
+    <div>&copy; djlun</div>
   </div>
 </template>
 

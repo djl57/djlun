@@ -1,5 +1,5 @@
 <template>
-  <div class="html-semantization">
+  <div class="app-box">
     <h1>HTML语义化</h1>
     <h2>一、什么是HTML语义化？</h2>
     <p>使用正确的标签，便于开发者阅读、写出更优雅的代码、让网络爬虫很好地解析。</p>

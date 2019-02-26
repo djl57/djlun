@@ -61,6 +61,23 @@ blockquote {
   }
 }
 
+th {
+  min-width: 80px;
+  background-color: #f4f6f8;
+  padding: 0 10px;
+}
+table {
+  tr {
+    &:nth-child(even) {
+      background-color: #f9fafb;
+    }
+    text-align: center;
+    td {
+      padding: 0 10px;
+    }
+  }
+}
+
 body {
   height: 100%;
   background-color: #ffffff;

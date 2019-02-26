@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-box">
     <ul v-for="item in items" :key="item.head" class="index">
       <div class="bold">{{ item.head }}</div>
       <li v-for="(el,index) in item.eles" :key="index">
