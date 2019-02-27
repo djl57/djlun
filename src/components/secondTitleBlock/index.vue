@@ -38,11 +38,7 @@ export default {
 
 .second-title {
   line-height: 25px;
-<<<<<<< HEAD
-  margin: 0 12px;
-=======
   margin-left: 12px;
->>>>>>> c1c4e4226210422173d5ca9453b72507f21c68e9
   .article-title {
     color: $ttColor;
   }

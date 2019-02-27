@@ -226,31 +226,4 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
-.aside, .none-aside {
-  position: fixed;
-  top: 70px;
-  width: 150px;
-  padding: 5px;
-  background-color: rgba(0, 150, 136, 0.5);
-  color: #ffffff;
-  border-radius: 5px;
-  transition: right 0.7s;
-  h1 {
-    position: absolute;
-    top: 30%;
-    padding: 10px 0;
-    border-radius: 8px;
-    width: 50px;
-    left: -56px;
-    background-color: rgba(0, 150, 136, 0.5);
-    color: #ffffff;
-  }
-}
-.aside {
-  right: 0;
-}
-.none-aside {
-  right: -150px;
-}
 </style>

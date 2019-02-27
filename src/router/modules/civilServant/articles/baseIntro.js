@@ -67,6 +67,23 @@ const baseIntro = [
       }
     ]
   },
+  {
+    path: '/intro5',
+    name: 'intro5',
+    component: () => import('@/components/base'),
+    meta: {
+      title: '申论的规矩',
+      type: 'baseIntro'
+    },
+    redirect: '/intro5/intro5Index',
+    children: [
+      {
+        path: 'intro5Index',
+        name: 'intro5Index',
+        component: () => import('@/views/civilServant/baseIntro/intro5')
+      }
+    ]
+  },
 ]
 export {
   baseIntro
