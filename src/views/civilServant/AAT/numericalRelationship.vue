@@ -145,19 +145,45 @@
         <ol>
           <li>平均速度：v = x / t</li>
           <li>等距离平均速度：v = S<sub>总</sub>/T<sub>总</sub> = 2v<sub>1</sub>v<sub>2</sub> / v<sub>1</sub> + v<sub>2</sub>（等距离两段、直线往返、上下坡往返）</li>
-          <li>直线相遇（两人同时相向而行）：S<sub>相遇</sub> = (v<sub>1</sub> + v<sub>2</sub>) * t；不是同时：</li>
+        </ol>
+        <h3>相对行程</h3>
+        <div class="bold">公式：</div>
+        <ol>
+          <li>直线相遇（两人同时相向而行）：S<sub>相遇</sub> = (v<sub>1</sub> + v<sub>2</sub>) * t；不是同时：公式略；</li>
           <li>环形相遇（同点出发）：S<sub>相遇</sub> = (v<sub>1</sub> + v<sub>2</sub>) * t；相遇一次：S<sub>相遇</sub> = 1圈；相遇n次，S<sub>相遇</sub> = n圈</li>
           <li>直线追及（两人同时同向而行）：S<sub>追及</sub> = (v<sub>1</sub> - v<sub>2</sub>) * t = 追及刚开始时两人相差的距离；</li>
           <li>环形追及（同点出发）：S<sub>追及</sub> = (v<sub>1</sub> - v<sub>2</sub>) * t；追上一次：S<sub>追及</sub> = 1圈；追上n次，S<sub>追及</sub> = n圈</li>
+          <li>多次相遇（两端出发）：第一次相遇：1S；第二次相遇：3S；第三次相遇：5S；第n次相遇：(2n-1)S=(v<sub>1</sub> + v<sub>2</sub>) * t；</li>
+          <li>流水行船：v<sub>顺</sub> = v<sub>船</sub> + v<sub>水</sub>；v<sub>逆</sub> = v<sub>船</sub> - v<sub>水</sub></li>；不强求记：v<sub>船</sub> = (v<sub>顺</sub> + v<sub>逆</sub>)/2；v<sub>水</sub> = (v<sub>顺</sub> - v<sub>逆</sub>)/2；
         </ol>
+        <p class="err">注：静水速度 = 船速，漂流速度 = 水速</p>
         <p class="err">遇上那种先跑几分钟，再跑几分钟，求再跑几分钟的题（陷阱题），可以直接在答案里猜，肯定有一个干扰项：总的时间；一个正确项：再跑几分钟；此两者肯定相差先跑+再跑的分钟数。</p>
-        
-        <h3>相对行程</h3>
-
+        <p>既有v<sub>1</sub> + v<sub>2</sub>，又有v<sub>1</sub> - v<sub>2</sub>的题：<span class="err">可以用到公式：v<sub>大</sub> = (v<sub>差</sub>+v<sub>和</sub>)/2；v<sub>小</sub> = (v<sub>和</sub>-v<sub>差</sub>)/2</span></p>
+        <p>求相遇次数的题，算出来不是整数，比如11.5，那么是相遇了11次。和完工天数不同。</p>
         <h3>比例行程</h3>
+        <p>路程 = 速度 * 时间</p>
+        <ol>
+          <li>路程一定，速度和时间成反比</li>
+          <li>速度一定，路程和时间成正比</li>
+          <li>时间一定，路程和速度成正比</li>
+        </ol>
       </section>
       <section :id="pros[2].id">
         <h2>{{pros[2].content}}</h2>
+        <ol>
+          <li>利润 = 售价 - 进价 （注意利润和利润里的区别）</li>
+          <li>利润率 = 利润 / 进价（与资料中的公式：利润率 = 利润 / 总收入 不同）</li>
+          <li>售价 = 进价*(1 + 利润率)</li>
+          <li>折扣 = 折后价 - 折前价</li>
+          <li>总价 = 单价 * 数量</li>
+          <li>总进价 = 单个进价 * 数量</li>
+          <li>总利润 = 单个利润 * 数量（这里注意陷阱，卖不掉的商品另算）（碰到题目中有说卖不掉的商品就用后面的公式） = 总售价 - 总进价</li>
+        </ol>
+        <p>假设的时候记得倍数特性和100</p>
+        <p class="err">比例传递特性：如果A/B=C/D，则A/B=C/D=A+C/B+D=A-C/B-D</p>
+        <h3>分段计费</h3>
+        <p>水电费、出租车计费等，每段计费标准不同。</p>
+        <p>问：在不同收费标准下，一共需要的费用？</p>
       </section>
       <section :id="pros[3].id">
         <h2>{{pros[3].content}}</h2>

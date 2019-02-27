@@ -33,6 +33,40 @@ const baseIntro = [
       }
     ]
   },
+  {
+    path: '/intro3',
+    name: 'intro3',
+    component: () => import('@/components/base'),
+    meta: {
+      title: '习近平讲话解读',
+      type: 'baseIntro'
+    },
+    redirect: '/intro3/intro3Index',
+    children: [
+      {
+        path: 'intro3Index',
+        name: 'intro3Index',
+        component: () => import('@/views/civilServant/baseIntro/intro3')
+      }
+    ]
+  },
+  {
+    path: '/intro4',
+    name: 'intro4',
+    component: () => import('@/components/base'),
+    meta: {
+      title: '国务院公报',
+      type: 'baseIntro'
+    },
+    redirect: '/intro4/intro4Index',
+    children: [
+      {
+        path: 'intro4Index',
+        name: 'intro4Index',
+        component: () => import('@/views/civilServant/baseIntro/intro4')
+      }
+    ]
+  },
 ]
 export {
   baseIntro

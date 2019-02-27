@@ -1,35 +1,28 @@
 <template>
   <div class="app-container">
-    applications
+    <p><a href="http://www.gov.cn/gongbao/2019/issue_7466.htm">http://www.gov.cn/gongbao/2019/issue_7466.htm</a></p>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
-  name: '',
+  name: 'intro4',
   data() {
     return {
-      
+      createTime: '0000-00-00 00:00:00'
     }
   },
   components: {
     
   },
   mounted() {
-    this.getList()
+    
   },
   computed: {
-    ...mapGetters([
-      'firstLevel',
-      'secondLevel',
-      'articleTitle'
-    ])
+    
   },
   methods: {
-    getList() {
-      this.$store.dispatch('GetList')
-    }
+    
   }
 }
 </script>
