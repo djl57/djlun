@@ -35,12 +35,15 @@ export default {
   line-height: 30px;
   padding-left: 6px;
   background-color: $themeBg;
+  overflow: hidden;
   .breadCrumb-item {
     &:not(:last-child) {
       &::after {
         content: ' / '
       }
     }
+    white-space: nowrap;
+    
     // .title {
     //   display: inline-block;
     //   width: 20%;

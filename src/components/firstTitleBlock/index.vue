@@ -3,7 +3,7 @@
     <div class="second-title">
       <div v-for="list in curSecondLevel" :key="list.title" class="second-item">
         <router-link :to="list.path">【{{ list.meta.title }}>>】</router-link>
-        <div v-for="ele in curArticleTitle(list.name)" :key="ele.title">
+        <div v-for="ele in curArticleTitle(list.name)" :key="ele.title" class="ellipsis">
           <router-link :to="ele.path" class="article-title">{{ ele.meta.title }}</router-link>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default {
       this.$store.dispatch('GetCurBread')
     },
     curArticleTitle(name) {
-      return this.articleTitle.filter(el => el.meta.type === name)
+      return this.articleTitle.filter(el => el.meta.type === name).slice(0, 10)
     }
   }
 }

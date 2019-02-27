@@ -1,5 +1,5 @@
 <template>
-  <div class="second-title">
+  <div class="second-title app-box">
     <div v-for="ele in curArticleTitle" :key="ele.path">
       <router-link :to="ele.path" class="article-title">{{ ele.meta.title }}</router-link>
     </div>
@@ -21,7 +21,7 @@ export default {
     ]),
     curArticleTitle() {
       const len = this.curBread.length - 1
-      return this.articleTitle.filter(el => el.meta.type === this.curBread[len].name).slice(0, 10)
+      return this.articleTitle.filter(el => el.meta.type === this.curBread[len].name)
     },
   },
   methods: {
@@ -38,7 +38,7 @@ export default {
 
 .second-title {
   line-height: 25px;
-  margin: 0 12px;
+  margin-left: 12px;
   .article-title {
     color: $ttColor;
   }
