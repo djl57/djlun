@@ -1,22 +1,27 @@
-const jsArray = [
-  {
-    path: '/slicePart',
-    name: 'slicePart',
+const datas = [
+  { name: 'arrayUnique', title: '数组去重' },
+  { name: 'slicePart', title: '截取数组的一部分' },
+]
+const jsArray = []
+datas.forEach(el => {
+  jsArray.push({
+    path: `/${el.name}`,
+    name: el.name,
     component: () => import('@/components/base'),
     meta: {
-      title: '截取数组的一部分',
+      title: el.title,
       type: 'jsArray'
     },
-    redirect: '/slicePart/slicePartIndex',
+    redirect: `/${el.name}/${el.name}Index`,
     children: [
       {
-        path: 'slicePartIndex',
-        name: 'slicePartIndex',
-        component: () => import('@/views/javascript/jsArray/slicePart')
+        path: `${el.name}Index`,
+        name: `${el.name}Index`,
+        component: () => import(`@/views/javascript/jsArray/${el.name}`)
       }
     ]
-  }
-]
+  })
+})
 
 export {
   jsArray

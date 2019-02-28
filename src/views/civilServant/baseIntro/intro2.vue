@@ -11,6 +11,7 @@
           <img src="../../../assets/images/three.jpg" width="100%">
         </li>
         <li>1~6 一起的最小公倍数是60</li>
+        <li>1.01^100 = 2.70（勤奋）；0.99^100 = 0.37（懒惰）</li>
       </ol>
     </main>
   </article>

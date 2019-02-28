@@ -170,6 +170,7 @@
       </section>
       <section :id="pros[2].id">
         <h2>{{pros[2].content}}</h2>
+        <h3>基础经济</h3>
         <ol>
           <li>利润 = 售价 - 进价 （注意利润和利润里的区别）</li>
           <li>利润率 = 利润 / 进价（与资料中的公式：利润率 = 利润 / 总收入 不同）</li>
@@ -184,15 +185,67 @@
         <h3>分段计费</h3>
         <p>水电费、出租车计费等，每段计费标准不同。</p>
         <p>问：在不同收费标准下，一共需要的费用？</p>
+        <p>注意：水电费的标准可能会是<span class="err">每人每月</span>多少。</p>
       </section>
       <section :id="pros[3].id">
         <h2>{{pros[3].content}}</h2>
+        <p>并没有涵盖全部几何问题（太多了），只是一些频繁考的类型。</p>
+        <section>
+          <h3>公式类</h3>
+          <div class="bold">规则图形：</div>
+          <img src="../../../assets/images/gongshi.jpg" width="100%">
+          <div class="bold">不规则图形：</div>
+          <p>转化为规则图形。重点：转化的方法。</p>
+          <p>考场上的如图所示，可以直接目测，一般不会乱画图。</p>
+        </section>
+        <section>
+          <h3>结论类</h3>
+          <p>见招拆招，逐步积累（因为太多）。看真题积累做题技巧。</p>
+          <p><router-link to="/geometricSummary/geometricSummaryIndex">结论总结 -></router-link></p>
+        </section>
+        <section>
+          <h3>技巧类</h3>
+          <div class="bold">直角三角形</div>
+          <p>a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup>。3 4 5；6 8 10；9 12 15；5 12 13</p>
+          <div class="bold">等腰三角形</div>
+          <p>三线合一：高，中线，角平分线是一条线。</p>
+          <div class="bold">相似三角形</div>
+          <p>各边对应成比例、面积比等于相似比的平方</p>
+          <p><span class="bold">梯形蝴蝶定理</span>：S1︰S2︰S3︰S4= a^2︰b^2︰ab︰ab</p>
+          <img src="../../../assets/images/hudie.jpg" width="80%">
+          <div class="bold">最短路径</div>
+          <p>直接连直线、镜面后再连直线</p>
+        </section>
       </section>
       <section :id="pros[4].id">
         <h2>{{pros[4].content}}</h2>
+        <h3>两集合</h3>
+        <p>A + B - AB = 总数 - 都不</p>
+        <h3>三集合</h3>
+        <p>A + B + C - AB - AC - BC + ABC = 总数 - 都不</p>
+        <p>A + B + C - 满足两项 - 满足三项*2 = 总数 - 都不</p>
+        <p>满足一项 + 满足两项 + 满足三项 = 总数 - 都不</p>
       </section>
       <section :id="pros[5].id">
         <h2>{{pros[5].content}}</h2>
+        <section>
+          <h3>分类与分步</h3>
+          <div class="bold">分类：</div>
+          <p>要么...要么... ： 相加</p>
+          <div class="bold">分步：</div>
+          <p>先...后...（既...又...） ： 相乘</p>
+        </section>
+        <section>
+          <h3>排列与组合</h3>
+          <img src="../../../assets/images/pailiezuhe.png" width="80%">
+          <div class="bold">排列：与顺序有关</div>
+          <p>选人干不同的事；</p>
+          <div class="bold">组合：与顺序无关</div>
+          <p>选人干同样的事；</p>
+          <div class="bold">注意：</div>
+          <p>有一个特殊的就先把特殊的概率算出来，再*其他的概率</p>
+          <p>选连续两天，不能代入上面两个公式，通过写出来选择</p>
+        </section>
       </section>
       <section :id="mores[0].id">
         <h2>{{mores[0].content}}</h2>

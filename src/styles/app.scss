@@ -76,6 +76,9 @@
   .flex {
     display: flex;
   }
+  .pre-wrap {
+    white-space: pre-wrap;
+  }
   .border-top {
     @include border-top(rgba(187, 187, 187, 0.6));
   }

@@ -18,33 +18,18 @@ const setZero = item => {
   }
 }
 
-// 浅克隆
-const shallowClone = obj => {
-  if (typeof obj !== 'object') return obj;
-  return obj instanceof Array ? [...obj] : {...obj};
-  // var newObj = obj instanceof Array ? [] : {};
-  // for (var key of obj) {
-  //   if (obj.hasOwnProperty(key)) {
-  //     newObj[key] = obj[key];
-  //   }
-  // }
-  // return newObj;
-}
-
-// 深克隆
-let deepClone = obj => {
-  if (typeof obj !== 'object') return obj;
-  let newObj = obj instanceof Array ? [] : {};
-  for (let key of obj) {
-    if (obj.hasOwnProperty(key)) {
-      newObj[key] = deepClone(obj[key])
-    }
-  }
-  return newObj;
-}
+import {shallowClone, deepClone} from './clone'
+import {originalUnique, indexOfUnique, sortUnique, filterUnique, filterSortUnique, es6FromUnique, objectUnique} from './unique'
 
 export {
   dateFormat,
   shallowClone,
-  deepClone
+  deepClone,
+  originalUnique,
+  indexOfUnique,
+  sortUnique,
+  filterUnique,
+  filterSortUnique,
+  es6FromUnique,
+  objectUnique
 }
