@@ -14,73 +14,35 @@ const route = [
       level: 1
     }
   },
-  {
-    path: '/vueSkill',
-    name: 'vueSkill',
-    component: () => import('@/views/home/secondTitle'),
-    meta: {
-      title: 'vue小技巧',
-      level: 2,
-      type: 'vuejs'
-    }
-  },
-  {
-    path: '/vueRouter',
-    name: 'vueRouter',
-    component: () => import('@/views/home/secondTitle'),
-    meta: {
-      title: 'vue-router',
-      level: 2,
-      type: 'vuejs'
-    }
-  },
-  {
-    path: '/vueSourse',
-    name: 'vueSourse',
-    component: () => import('@/views/home/secondTitle'),
-    meta: {
-      title: 'vue源码',
-      level: 2,
-      type: 'vuejs'
-    }
-  },
-  {
-    path: '/vueVuex',
-    name: 'vueVuex',
-    component: () => import('@/views/home/secondTitle'),
-    meta: {
-      title: 'vuex',
-      level: 2,
-      type: 'vuejs'
-    }
-  },
-  {
-    path: '/readProject',
-    name: 'readProject',
-    component: () => import('@/views/home/secondTitle'),
-    meta: {
-      title: '看项目',
-      level: 2,
-      type: 'vuejs'
-    }
-  },
-  {
-    path: '/nuxtjs',
-    name: 'nuxtjs',
-    component: () => import('@/views/home/secondTitle'),
-    meta: {
-      title: 'Nuxt.js',
-      level: 2,
-      type: 'vuejs'
-    }
-  },
-  ...vueSkill,
-  ...vueRouter,
-  ...vueSourse,
-  ...vueVuex,
-  ...readProject,
-  ...nuxtjs
 ]
+const datas = [
+  { name: 'vueSkill', title: 'vue小技巧' },
+  { name: 'vueRouter', title: 'vue-router' },
+  { name: 'vueSourse', title: 'vue源码' },
+  { name: 'vueVuex', title: 'vuex' },
+  { name: 'readProject', title: '看项目' },
+  { name: 'nuxtjs', title: 'Nuxt.js' },
+  { name: 'operateObj', title: '操作对象' },
+  { name: 'vueEventHandling', title: 'vue 事件处理' },
+]
+datas.forEach(el => {
+  route.push({
+    path: `/${el.name}`,
+    name: el.name,
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: el.title,
+      level: 2,
+      type: 'vuejs'
+    }
+  })
+})
+route.push(...vueSkill)
+route.push(...vueRouter)
+route.push(...vueSourse)
+route.push(...vueVuex)
+route.push(...readProject)
+route.push(...nuxtjs)
 
 export {
   route

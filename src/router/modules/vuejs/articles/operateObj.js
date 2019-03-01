@@ -1,29 +1,28 @@
-const jsInterview = []
-
+const operateObj = []
 const data = [
-  { name: 'jsCopy', title: '克隆' },
-  { name: 'jsGetType', title: '封装getType函数' },
+  { name: 'vueAddObj', title: 'vue 动态添加对象属性' },
+  { name: 'vueDeleteObj', title: 'vue 删除对象属性' }
 ]
 data.forEach(el => {
-  jsInterview.push({
+  operateObj.push({
     path: `/${el.name}`,
     name: `${el.name}`,
     component: () => import('@/components/base'),
     meta: {
       title: `${el.title}`,
-      type: 'jsInterview'
+      type: 'operateObj'
     },
     redirect: `/${el.name}/${el.name}Index`,
     children: [
       {
         path: `${el.name}Index`,
         name: `${el.name}Index`,
-        component: () => import(`@/views/javascript/jsInterview/${el.name}`)
+        component: () => import(`@/views/vuejs/operateObj/${el.name}`)
       }
     ]
   })
 })
 
 export {
-  jsInterview
+  operateObj
 }

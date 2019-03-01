@@ -1,29 +1,27 @@
-const jsInterview = []
-
+const vueEventHandling = []
 const data = [
-  { name: 'jsCopy', title: '克隆' },
-  { name: 'jsGetType', title: '封装getType函数' },
+  { name: 'inputFacus', title: 'input 获取焦点和失去焦点' },
+  // { name: 'vueDeleteObj', title: 'vue 删除对象属性' }
 ]
 data.forEach(el => {
-  jsInterview.push({
+  vueEventHandling.push({
     path: `/${el.name}`,
     name: `${el.name}`,
     component: () => import('@/components/base'),
     meta: {
       title: `${el.title}`,
-      type: 'jsInterview'
+      type: 'vueEventHandling'
     },
     redirect: `/${el.name}/${el.name}Index`,
     children: [
       {
         path: `${el.name}Index`,
         name: `${el.name}Index`,
-        component: () => import(`@/views/javascript/jsInterview/${el.name}`)
+        component: () => import(`@/views/vuejs/vueEventHandling/${el.name}`)
       }
     ]
   })
 })
-
 export {
-  jsInterview
+  vueEventHandling
 }

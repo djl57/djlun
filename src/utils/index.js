@@ -20,16 +20,22 @@ const setZero = item => {
 
 import {shallowClone, deepClone} from './clone'
 import {originalUnique, indexOfUnique, sortUnique, filterUnique, filterSortUnique, es6FromUnique, objectUnique} from './unique'
+import {getType, isEmptyObject} from './types'
 
 export {
   dateFormat,
+
   shallowClone,
   deepClone,
+
   originalUnique,
   indexOfUnique,
   sortUnique,
   filterUnique,
   filterSortUnique,
   es6FromUnique,
-  objectUnique
+  objectUnique,
+
+  getType,
+  isEmptyObject
 }
