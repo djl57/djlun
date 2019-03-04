@@ -18,11 +18,20 @@
         <div v-html="tableCode"></div>
         <h3>代码：</h3>
         <pre><code>{{ tableCode }}</code></pre>
+        <h3>合并单元格：</h3>
+        <div v-html="colspanCode"></div>
+        <h3>代码：</h3>
+        <pre><code>{{ colspanCode }}</code></pre>
       </section>
       <section>
         <h2 id="form">表单标签</h2>
       </section>
     </main>
+    <footer>
+      <h2>参考</h2>
+      <p><a href="https://blog.csdn.net/jcx5083761/article/details/7724754">table合并单元格colspan和rowspan</a></p>
+      <p><a href="http://www.w3school.com.cn/tags/att_td_colspan.asp">HTML td 标签的 colspan 属性</a></p>
+    </footer>
   </article>
 </template>
 
@@ -63,6 +72,29 @@ export default {
     <td>lanbao</td>
     <td>女</td>
     <td>21</td>
+  </tr>
+</table>`,
+      colspanCode: `<table>
+  <tr>
+    <th colspan="2">题型</th>
+    <th>题量</th>
+  </tr>
+  <tr>
+    <td rowspan="4">判断推理</td>
+    <td>图形推理</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>定义判断</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>类比推理</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>逻辑判断</td>
+    <td>10</td>
   </tr>
 </table>`
     }

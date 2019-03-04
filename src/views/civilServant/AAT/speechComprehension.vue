@@ -1,34 +1,149 @@
 <template>
-  <div class="app-container">
-    speechComprehension
+  <div class="app-box">
+    <aside :class="aside? 'aside':'none-aside'">
+      <h1 @click="showAside">{{ catalog }}</h1>
+      <ol>
+        <li v-for="item in catalogs" :key="item.id">
+          <a :href="'#'+item.id">{{ item.text }}</a>
+          <div v-if="item.children">
+            <div v-for="el in item.children" :key="el.id">
+              <a :href="'#'+el.id">{{ el.text }}</a>
+              <div v-if="el.items">
+                <div v-for="list in el.items" :key="list.id" class="padding-left10">
+                  <a :href="'#'+list.id">{{ list.text }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </aside>
+    <section @click="hideCatalog">
+      <p>分略读 和 详读。</p>
+      <h1 id="ca1">片段阅读</h1>
+      <p>题型：一段文字+提问方式+四个选项</p>
+      <p>1、先看提问方式；2、带着问题读文段</p>
+      <p>对比选项，择优 的思维</p>
+      <p>自我总结：一般选项能在文段中找到，分析其位置，判断是否是中心意思。</p>
+      <p class="err">重点：不明确的一定不能选。</p>
+      <section>
+        <h2 id="ch1-1">中心理解题（10道左右）</h2>
+        <h3 class="bold">提问方式</h3>
+        <p>这段文字 主要/旨在/重在/意在/想要说明/主旨（已经跟意图没有区别）/主题/观点/概括最佳当。</p>
+        <p class="err">注意 与主旨无关 的提问方式。</p>
+        <h3 class="bold">解题思路</h3>
+        <p>1、重点词语：关联词、主题词、程度词</p>
+        <p>2、行文脉络：指的是文段的写作思路或者文章的结构</p>
+        <p>先找关联词（转折、因果），再看主题词、程度词，结合行文脉络。</p>
+
+        <h3>关联词</h3>
+        <div class="bold" id="it1-1-1">转折关系：</div>
+        <p>虽然...但是...；尽管...可是...；...不过...；...然而...；...却...；其实/事实上/实际上...；殊不知...；
+          截然不同；截然相反；全新的研究；一种误读；相对而言；
+        </p>
+        <p>转折之后是重点，结合行文脉络</p>
+        <p>以【近年来】开头，说明这句话说明背景，略读，读出文章话题。以【比如、如】开头，说明这句话是在举例子，作用是加强论证。</p>
+        <p>选项中，转折之前的内容不能选（非重点）；优选表述明确的选项（对比其他选项得来）</p>
+        <p>常见挖坑方式：1、无中生有；2、非重点的表述；3、优先相对温和的表述，过于绝对的一般不选；4、优选表述明确的选项。（对比选项得出明确选项，比如一个选项有利于，一个选项不利于，那优选有利于）</p>
+        <p>逆向思维：如果转折之后内容太多，占用太多时间，就可以用逆向思维，将转折前的内容反过来。</p>
+        <p>使用题型文段特征：“很多人/大多数人都以为”、“不少人/传统观点认为” + 转折表述。</p>
+
+        <div class="bold" id="it1-1-2">因果关系：</div>
+        <p>因为...所以...；由于...因此...；因而...；故而...；于是...；可见...；看来...</p>
+        <p>导致/致使/使得/造成...（后面跟一些不好的结果）；</p>
+        <p>选项中出现为什么/为何，后面跟的是结果（比如：欧阳为什么迟到。结果是迟到。）</p>
+        <p>如果结论词出现在尾句：大部分情况下是对前文的总结，其之后是文段的中心。</p>
+        <p>如果结论词出现在开头/中间，之后仍有其他语句。</p>
+        <p>1、之后的语句是进一步解释说明，此时中心句仍是结论句。</p>
+        <p>2、之后又出现并列、因果、转折，需结合多种关联词共同分析。（因为我爱吃，所以我很胖，但是我嫁出去了（中心）。）</p>
+        <p>结论是重点。</p>
+        <p>不明确的选项一定不能选。</p>
+        
+        <div class="bold" id="it1-1-4">必要条件关系：</div>
+        <p>只有...（重点）才...</p>
+        <p>必要条件是重点。必要条件即是“只有”和“才”之间的部分。</p>
+        <p>言语中不会考充分条件（只要...就...），这种表述过于绝对。</p>
+        <p>【最新考点】：省略“只有”（比如：“只有好好学习，才能天天向上。”和“好好学习，才能天天向上。”）</p>
+
+        <div class="bold" id="it1-1-5">对策：</div>
+        <p>必要条件的变形。“只有好好学习，才能天天向上”->“”</p>
+        <p>对策标志词:</p>
+        <p>1、应该、应当、必须、需要、亟待、亟待 + 做法 （情态动词引导对策）</p>
+        <p>2、通过/采取...手段/途径/措施/方式/方法/渠道，才能...（通过名词引导对策）</p>
+        <p>3、呼吁、倡导、提倡、提醒、建议 + 做法 （通过动词引导对策）</p>
+        <p>4、前提、基础、保障（通过名词引导对策，出现频率少）“好好学习是天天向上的前提”</p>
+        <p>对策行文脉络：</p>
+        <p>1、提出问题-分析问题-<span class="err">解决问题</span>（对策，重点）</p>
+        <p>2、对策（重点）+正反论证/原因论证</p>
+        <p>3、提出问题-<span class="err">解决问题</span>（对策，重点）-意义效果</p>
+        <p>【补充技巧】：例子本身不重要，但是如果做题发现中心句似乎很难理解，这时候可以通过例子来帮助理解，从而得到答案。</p>
+        
+        <h3 id="it1-1-3">主题词</h3>
+        <p>起一个辅助功能。当觉得题目太难时，就使用这个技巧。</p>
+        <div class="bold">主题词特征：</div>
+        <p>1、文段围绕其展开</p>
+        <p>2、一般高频出现（主题词可能被指代为 其/该/它）</p>
+        <p>3、大多为名词</p>
+        <p>4、前有引入，后有解释说明</p>
+        <p>常见挖坑方式：1、概念扩得太大（即选项不明确）；</p>
+      </section>
+    </section>
+    <section>
+      <h1 id="ca2"></h1>
+      <section></section>
+    </section>
+    <section>
+      <h1 id="ca3"></h1>
+    </section>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
   name: '',
   data() {
     return {
-      
+      createdTime: '2019-03-04 12:10:00',
+      catalogs: [
+        {id: 'ca1', text: '片段阅读：', children: [
+          {id: 'ch1-1', text: '中心理解题', items: [
+            {id: 'it1-1-1', text:'转折关系'},
+            {id: 'it1-1-2', text:'因果关系'},
+            {id: 'it1-1-4', text:'必要条件关系'},
+            {id: 'it1-1-5', text:'对策标志词'},
+            // {id: 'it1-1-', text:'并列关系'},
+            {id: 'it1-1-3', text:'主题词'},
+          ]},
+          {id: 'ch2', text: ''},
+        ]},
+        {id: 'ca2', text: '逆向思维的用法',children: [
+          {id: '', text: '', items: [
+
+          ]},
+        ]},
+        {id: 'ca3', text: '主题词的特征', children: [
+
+        ]},
+      ],
+      aside: false,
+      catalog: '目录'
     }
   },
   components: {
     
   },
   mounted() {
-    this.getList()
   },
   computed: {
-    ...mapGetters([
-      'firstLevel',
-      'secondLevel',
-      'articleTitle'
-    ])
   },
   methods: {
-    getList() {
-      this.$store.dispatch('GetList')
+    showAside() {
+      this.aside = !this.aside
+      this.aside ? this.catalog = '隐藏' : this.catalog = '目录';
+    },
+    hideCatalog() {
+      this.aside = false
+      this.catalog = '目录'
     }
   }
 }

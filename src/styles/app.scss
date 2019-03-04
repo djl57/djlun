@@ -28,7 +28,7 @@
   }
   .aside, .none-aside {
     position: fixed;
-    top: 70px;
+    top: 60px;
     width: 150px;
     padding: 5px;
     background-color: rgba(0, 150, 136, 0.5);
@@ -78,6 +78,9 @@
   }
   .pre-wrap {
     white-space: pre-wrap;
+  }
+  .padding-left10 {
+    padding-left: 10px;
   }
   .border-top {
     @include border-top(rgba(187, 187, 187, 0.6));
