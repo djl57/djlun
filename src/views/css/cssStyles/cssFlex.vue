@@ -171,7 +171,7 @@
       </section>
     </main>
     <footer>
-      <h2>参考</h2>
+      <h2>摘抄</h2>
       <p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool">Flex 布局教程：语法篇</a></p>
     </footer>
   </article>

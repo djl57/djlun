@@ -13,7 +13,7 @@
       </section>
     </main>
     <footer>
-      <h2>参考</h2>
+      <h2>摘抄</h2>
       <p><a href="https://www.cnblogs.com/Ivy-s/p/6786622.html">对CSS3中的transform：Matrix（）矩阵的一些理解</a></p>
       <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform">MDN transform</a></p>
     </footer>

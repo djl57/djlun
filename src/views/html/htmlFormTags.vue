@@ -28,7 +28,7 @@
       </section>
     </main>
     <footer>
-      <h2>参考</h2>
+      <h2>摘抄</h2>
       <p><a href="https://blog.csdn.net/jcx5083761/article/details/7724754">table合并单元格colspan和rowspan</a></p>
       <p><a href="http://www.w3school.com.cn/tags/att_td_colspan.asp">HTML td 标签的 colspan 属性</a></p>
     </footer>
