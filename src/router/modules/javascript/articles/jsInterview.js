@@ -3,6 +3,7 @@ const jsInterview = []
 const data = [
   { name: 'jsCopy', title: '克隆' },
   { name: 'jsGetType', title: '封装getType函数' },
+  { name: 'jsProtoType', title: '原型、原型链' },
 ]
 data.forEach(el => {
   jsInterview.push({
