@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-box">
     <p v-show="curArticle" v-for="item in curArticle[0].content" :key="item" v-html="item"></p>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.app-container {
+.app-box {
   white-space: pre-wrap;
 }
 </style>

@@ -39,7 +39,6 @@
       <h3>new 的用法：</h3>
       1. <pre><code>{{ new1 }}</code></pre>
       2. <pre><code>{{ new2 }}</code></pre>
-      3. <pre><code>{{ new3 }}</code></pre>
       <h3>最终实现代码：</h3>
       <pre><code>{{ news }}</code></pre>
     </section>
@@ -197,10 +196,42 @@ console.log(obj.friend);  // kevin`,
   fbound.prototype = new fNOP(); // 再看一下原型链
   return fbound;
 }`,
-      new1: ``,
-      new2: ``,
-      new3: ``,
-      news: ``
+      new1: `function Otaku (name, age) {
+  this.name = name;
+  this.age = age;
+  this.habit = 'Games';
+}
+Otaku.prototype.strength = 60;
+Otaku.prototype.sayYourName = function () {
+  console.log('I am ' + this.name);
+}
+
+var person = new Otaku('Kevin', '18');
+console.log(person.name) // Kevin
+console.log(person.habit) // Games // 1、实例 person 可以访问到 Otaku 构造函数里的属性
+console.log(person.strength) // 60 // 2、实例 person 可以访问到 Otaku.prototype 中的属性
+person.sayYourName(); // I am Kevin`,
+      new2: `// 假如构造函数有返回值
+function Otaku (name, age) {
+  this.strength = 60;
+  this.age = age;
+  return { // 构造函数返回一个对象
+    name: name,
+    habit: 'Games'
+  }
+}
+var person = new Otaku('Kevin', '18');
+console.log(person.name) // Kevin // *实例 person 中只能访问返回的对象中的属性
+console.log(person.habit) // Games
+console.log(person.strength) // undefined
+console.log(person.age) // undefined`,
+      news: `function objectFactory() { // 第一个参数为构造函数，其他参数为传入构造函数的参数
+  var obj = new Object(), // 新建一个对象
+      Constructor = [].shift.call(arguments); // 删除arguments第一个元素，并将这个元素返回
+  obj.__proto__ = Constructor.prototype; // 将obj的原型设为构造函数的原型，就可以访问构造函数原型中的属性
+  var ret = Constructor.apply(obj, arguments); // 将obj设为构造函数的this（这样 obj 就可以访问到构造函数中的属性），并将删除了第一个元素的arguments当参数传入
+  return typeof ret === 'object' ? ret : obj; // 还需要判断返回的值是不是一个对象，如果是一个对象，我们就返回这个对象，如果*没有*，我们该返回什么就返回什么。
+};`
     }
   },
   components: {
