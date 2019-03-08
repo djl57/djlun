@@ -11,7 +11,7 @@
       <pre><code>{{ codeLeft2 }}</code></pre>
       <pre><code>{{ codeRight2 }}</code></pre>
     </div>
-    <h2>摘抄（文章将es6和es5对比地很清楚）</h2>
+    <h2>摘抄自（文章将es6和es5对比地很清楚）</h2>
     <p><a href="https://segmentfault.com/a/1190000016914693">ES6 系列之 Babel 是如何编译 Class 的(上)</a></p>
   </article>
 </template>

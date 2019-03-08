@@ -43,7 +43,7 @@
       <pre><code>{{ news }}</code></pre>
     </section>
     <footer>
-      <h2>摘抄</h2>
+      <h2>摘抄自</h2>
       <p><a href="https://segmentfault.com/a/1190000009257663">JavaScript深入之call和apply的模拟实现</a></p>
       <p><a href="https://segmentfault.com/a/1190000009271416">JavaScript深入之bind的模拟实现</a></p>
       <p><a href="https://segmentfault.com/a/1190000009286643">JavaScript深入之new的模拟实现</a></p>

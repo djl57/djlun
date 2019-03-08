@@ -71,7 +71,7 @@
       <p>Set+Array.from()：(9)[1, 2, 3, 4, undefined, NaN, null, 0, Number]</p>
     </section>
     <footer>
-      <h2>摘抄</h2>
+      <h2>摘抄自</h2>
       <p><a href="https://segmentfault.com/a/1190000009867515">JavaScript专题之数组去重</a></p>
     </footer>
   </article>

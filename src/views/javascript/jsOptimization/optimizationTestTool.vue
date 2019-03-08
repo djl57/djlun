@@ -93,7 +93,7 @@ let deepClone = obj => {
       </section>
     </main>
     <footer>
-      <h2>摘抄：</h2>
+      <h2>摘抄自：</h2>
       <p><a href="https://www.cnblogs.com/diantao/p/5271652.html">js简易函数性能测试器</a></p>
       <p><a href="https://blog.csdn.net/sinat_17775997/article/details/70482279">JS浅克隆与深克隆</a></p>
       <p><a href="https://segmentfault.com/a/1190000010150234">vaScript专题之深浅拷贝</a></p>

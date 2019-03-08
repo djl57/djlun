@@ -8,7 +8,7 @@
     {{ obj }} 
     <input type="button" value="动态删除name" @click="deletename">
     <input type="button" value="删除name" @click="deletenamejs">
-    <h2>摘抄</h2>
+    <h2>摘抄自</h2>
     <p><a href="https://blog.csdn.net/xiasohuai/article/details/80650217">Vue.delete()删除对象的属性</a></p>
   </article>
 </template>

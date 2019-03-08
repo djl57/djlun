@@ -38,7 +38,7 @@
       </section>
     </main>
     <footer>
-      <h2>摘抄</h2>
+      <h2>摘抄自</h2>
       <p><a href="https://github.com/muwoo/blogs/issues/18">JS 数据类型、赋值、深拷贝和浅拷贝</a></p>
       <p><a href="https://www.zhihu.com/question/24804474">JavaScript 里 Function 也算一种基本类型？</a></p>
     </footer>

@@ -14,7 +14,7 @@
       <pre><code>{{ code }}</code></pre>
     </section>
     <section>
-      <h2>摘抄</h2>
+      <h2>摘抄自</h2>
       <p><a href="https://segmentfault.com/a/1190000009943534">JavaScript专题之类型判断(上)</a></p>
     </section>
     <section>

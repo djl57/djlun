@@ -3,7 +3,7 @@
     <div class="article-main">
       <v-header></v-header>
       <bread-crumb></bread-crumb>
-      <morning-main></morning-main>
+      <morning-main class="app-container"></morning-main>
     </div>
     <nav-search></nav-search>
     <v-footer></v-footer>

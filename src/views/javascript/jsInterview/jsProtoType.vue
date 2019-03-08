@@ -23,7 +23,7 @@
     <h3>原型链</h3>
     <p>由相互关联的原型组成的链状结构就是原型链</p>
     <footer>
-      <h2>摘抄</h2>
+      <h2>摘抄自</h2>
       <p><a href="https://segmentfault.com/a/1190000008959943">JavaScript深入之从原型到原型链</a></p>
     </footer>
   </article>

@@ -9,7 +9,7 @@
         <p>学习 vue 的 SSR</p>
       </section>
       <section>
-        <h2>摘抄</h2>
+        <h2>摘抄自</h2>
         <p><a href="https://github.com/muwoo/doubanMovie-SSR">项目源码</a></p>
         <p><a href="https://segmentfault.com/a/1190000008795113">实例PK(Vue服务端渲染 VS Vue浏览器端渲染)</a></p>
       </section>

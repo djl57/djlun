@@ -97,7 +97,7 @@
       </section>
     </main>
     <footer>
-      <h2>摘抄</h2>
+      <h2>摘抄自</h2>
       <p><a href="https://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/">设备像素比devicePixelRatio简单介绍</a></p>
       <p><a href="https://www.jianshu.com/p/31f8907637a6">移动端 1px 像素问题及解决办法</a></p>
     </footer>
