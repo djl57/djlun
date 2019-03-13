@@ -1,5 +1,5 @@
 <template>
-  <div class="app-box">
+  <article class="app-box">
     <aside :class="aside? 'aside':'none-aside'">
       <h1 @click="showAside">{{ catalog }}</h1>
       <ol>
@@ -19,10 +19,9 @@
       </ol>
     </aside>
     <section @click="hideCatalog">
-      <p>题量：35道 = 20道 + 15道 = 4篇×5道 + 3篇×5道</p>
-      <p>要求：25-30分钟，对17个以上；18-23分钟，对13个以上。</p>
-      <p>正确率应该在80%以上。</p>
-      <p>方法：（1）定位数据【处理材料】；（2）列式计算【识别->列式->计算】</p>
+      <p>抄材料中的核心词，不要抄段落。（60%）</p>
+      <p>把材料中说的啰嗦的段落，用自己的词分析归纳。（30%）</p>
+      <p>根据材料描述的某部分，分析推导成问题想要的答案。（10%）</p>
       <section>
         <h2 id="ca1">速算技巧：</h2>
 
@@ -216,15 +215,15 @@
         <p>（7）不足一年：当年新增加的【我学行测不足一年，那我就是今年新学的行测】</p>
       </section>
     </section>
-  </div>
+  </article>
 </template>
 
 <script>
 export default {
-  name: 'dataAnalysis',
+  name: '',
   data() {
     return {
-      createTime: '2019-03-12 09:05:00',
+      createTime: '2019-03-13 10:21:00',
       aside: false,
       catalog: '目录',
       catalogs: [
@@ -268,8 +267,10 @@ export default {
     
   },
   mounted() {
+    
   },
   computed: {
+    
   },
   methods: {
     showAside() {

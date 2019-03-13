@@ -1,4 +1,27 @@
 let application = []
+const data = [
+  { name: 'applicationNotes', title: '粉笔申论视频笔记' },
+  { name: 'applicationRcite', title: '申论作文积累背诵' }
+]
+data.forEach(el => {
+  application.push({
+    path: `/${el.name}`,
+    name: el.name,
+    component: () => import('@/components/base'),
+    meta: {
+      title: el.title,
+      type: 'application'
+    },
+    redirect: `/${el.name}/${el.name}Index`,
+    children: [
+      {
+        path: `${el.name}Index`,
+        name: `${el.name}Index`,
+        component: () => import(`@/views/civilServant/application/${el.name}`)
+      }
+    ]
+  })
+})
 const datas = [
   { name: 'applications-honesty', title: '申论范文：与诚信同行 为发展蓄力' },
   { name: 'applications-honesty1', title: '东汉杨震“不受四知金”的故事' },
