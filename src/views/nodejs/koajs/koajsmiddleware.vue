@@ -23,7 +23,9 @@
     <h3>中间件执行顺序：洋葱图【从外向内，从内向外】（和express不同）</h3>
 
     <h2>第三方中间件</h2>
-    <p>使用模板引擎ejs时引入了第三方中间件koa-views【ejs01.js】；</p>
+    <p>（1）使用模板引擎ejs时引入了第三方中间件koa-views【ejs01.js】；</p>
+    <p>（2）post 提交数据时引入了第三方中间件koa-bodyparser【post01.js】</p>
+    <p>（3）koa的静态资源中间件koa-static</p>
   </article>
 </template>
 

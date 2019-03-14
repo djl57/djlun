@@ -19,7 +19,7 @@ export default {
 
 <style scoped lang="scss">
 .app-container {
-  height: 60px;
-  line-height: 30px;
+  height: 50px;
+  line-height: 25px;
 }
 </style>

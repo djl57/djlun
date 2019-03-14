@@ -56,7 +56,6 @@ export default {
   .first-title {
     background-color: $themeBg;
     height: 25px;
-    margin: 3px 0;
     padding: 0 6px;
     font-weight: 600;
   }

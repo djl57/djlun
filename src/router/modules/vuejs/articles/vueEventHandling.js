@@ -1,7 +1,7 @@
 const vueEventHandling = []
 const data = [
   { name: 'inputFacus', title: 'input 获取焦点和失去焦点' },
-  // { name: 'vueDeleteObj', title: 'vue 删除对象属性' }
+  { name: 'vueWatchKey', title: 'vue 监听键盘事件' }
 ]
 data.forEach(el => {
   vueEventHandling.push({

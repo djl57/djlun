@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [vueRouter, vueSkill, vueSourse, vueVuex, readProject, nuxtjs] = res
+let [nuxtjs, operateObj, readProject, vueEventHandling, vueRouter, vueSkill, vueSourse, vueVuex] = res
 
 const route = [
   {
@@ -43,6 +43,8 @@ route.push(...vueSourse)
 route.push(...vueVuex)
 route.push(...readProject)
 route.push(...nuxtjs)
+route.push(...operateObj)
+route.push(...vueEventHandling)
 
 export {
   route

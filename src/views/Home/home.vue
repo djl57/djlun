@@ -1,16 +1,18 @@
 <template>
   <div class="home">
-    <div class="home-main">
-      <div class="home-icon">
-        <svg-icon :icon-class="iconClass" />
-        <span class="home-left">Today is {{iconClass}}.</span>
-        <!-- <span class="home-right">SUMMARY</span> -->
-      </div>
-      <nav-search></nav-search>
-      <!-- <msg-roll></msg-roll> -->
-      <title-block></title-block>
+    <div class="home-icon">
+      <svg-icon :icon-class="iconClass" />
+      <span class="home-left">Today is {{iconClass}}.</span>
+      <!-- <span class="home-right">SUMMARY</span> -->
     </div>
-    <v-footer></v-footer>
+    <nav-search class="border-bottom"></nav-search>
+    <!-- <msg-roll></msg-roll> -->
+    <div class="home-box">
+      <title-block></title-block>
+      <div class="border-top">
+        <v-footer></v-footer>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,8 +47,8 @@ export default {
 <style lang="scss" scoped>
 .home {
   .home-icon {
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     margin: 0 10px;
     .svg-icon {
       vertical-align: middle;

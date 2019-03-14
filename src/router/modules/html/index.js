@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [index, htmlGeneralKnowledge] = res
+let [htmlActions, index, htmlGeneralKnowledge] = res
 
 let route = [
   {
@@ -34,6 +34,17 @@ let route = [
       type: 'html'
     }
   },
+  {
+    path: '/htmlActions',
+    name: 'htmlActions',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: 'html小功能',
+      level: 2,
+      type: 'html'
+    }
+  },
+  ...htmlActions,
   ...index,
   ...htmlGeneralKnowledge
 ]
