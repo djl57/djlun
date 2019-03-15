@@ -1,5 +1,5 @@
 <template>
-  <div class="app-box">
+  <div  >
     <p v-show="curArticle" v-for="item in curArticle[0].content" :key="item" v-html="item"></p>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article>
     <div>aatKeyWords</div>
   </article>
 </template>

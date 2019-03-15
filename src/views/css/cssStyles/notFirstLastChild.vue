@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <header>
       <h1>样式第一个和最后一个不被选中</h1>
     </header>

@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>为什么要讲这个模板引擎？</h2>
     <p>（1）速度奇快；</p>
     <p>（2）支持ejs语法，也可以用类似angular的语法</p>

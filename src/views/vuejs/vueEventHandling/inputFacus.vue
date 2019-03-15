@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>js 中</h2>
     <h3>获取焦点：</h3>
     <p><code>id.onBlur = function(){}</code></p>

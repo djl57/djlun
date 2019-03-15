@@ -9,7 +9,8 @@ const data = [
   { name: 'koajsArtTemplate', title: 'koa art-template模板引擎' },
   { name: 'koajsCookie', title: 'koa 中cookie的使用' },
   { name: 'koajsSession', title: 'koa 中session的使用' },
-  { name: 'mongoDBCompassCommunity', title: 'mongoDB Compass community可视化工具的使用' },
+  { name: 'mongoDBCompassCommunity', title: 'mongoDB Compass community可视化工具的使用和前置知识准备' },
+  { name: 'mongoDBClass', title: '封装koa操作mongoDb数据库的DB类' },
 ]
 data.forEach(el => {
   koajs.push({

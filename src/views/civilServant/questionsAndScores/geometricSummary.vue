@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h3>正八面体体积公式：</h3>
     <p>V = 1/6a<sup>3</sup>，其中a为正八面体对角线的长度。</p>
     <h3>各边中点连线求面积：</h3>

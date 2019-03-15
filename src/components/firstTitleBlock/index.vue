@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="first-title border-bottom">
     <div class="second-title">
       <div v-for="list in curSecondLevel" :key="list.title" class="second-item">
         <router-link :to="list.path">【{{ list.meta.title }}>>】</router-link>
@@ -43,8 +43,9 @@ export default {
 <style scoped lang="scss">
 @import '../../styles/variables.scss';
 
-.app-container {
+.first-title {
   line-height: 25px;
+  min-height: calc(100vh - 140px);
   .second-title {
     display: flex;
     flex-wrap: wrap;

@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h1>
       封装getType方法 判断数据类型
     </h1>

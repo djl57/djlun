@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <textarea ref="text" cols="30" rows="10" maxlength="100" 
     v-model="text" placeholder="请输入不超过100个字符"></textarea>
     <span>已输入{{ text.length }}/100</span>

@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>介绍</h2>
     <p>开发思路和express差不多，最大的特点就是可以避免异步嵌套。</p>
     <p>文档：<a href="https://www.itying.com/koa/">https://www.itying.com/koa/</a></p>

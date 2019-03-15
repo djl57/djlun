@@ -1,5 +1,5 @@
 <template>
-  <div class="second-title app-box">
+  <div class="second-title border-bottom">
     <div v-for="ele in curArticleTitle" :key="ele.path">
       <router-link :to="ele.path" class="article-title">{{ ele.meta.title }}</router-link>
     </div>
@@ -38,7 +38,8 @@ export default {
 
 .second-title {
   line-height: 25px;
-  margin-left: 12px;
+  padding-left: 12px;
+  min-height: calc(100vh - 140px);
   .article-title {
     color: $ttColor;
   }

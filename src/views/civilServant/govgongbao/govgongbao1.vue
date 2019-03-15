@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h1>中共中央 国务院关于支持河北雄安新区全面深化改革和扩大开放的指导意见</h1>
     <section>
       <p class="pre-wrap" v-html="text"></p>

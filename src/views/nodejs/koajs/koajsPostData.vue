@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>获取post提交的数据的方式</h2>
     <p>（1）node.js原生</p>
     <p>（2）koa-bodyparser中间件</p>

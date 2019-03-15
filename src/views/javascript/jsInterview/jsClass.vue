@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <p>class 写法让对象原型的写法更加清晰、更像面向对象编程的语法。</p>
     <div class="flex">
       <pre><code>{{ codeLeft }}</code></pre>

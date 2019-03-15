@@ -1,12 +1,14 @@
 <template>
-  <div class="article-layout">
-    <div class="article-main">
-      <v-header></v-header>
-      <bread-crumb></bread-crumb>
-      <slot></slot>
+  <div>
+    <v-header></v-header>
+    <bread-crumb></bread-crumb>
+    <div class="article-layout">
+      <div class="border-bottom article-box app-container">
+        <slot></slot>
+      </div>
+      <nav-search></nav-search>
+      <v-footer></v-footer>
     </div>
-    <nav-search></nav-search>
-    <v-footer></v-footer>
   </div>
 </template>
 

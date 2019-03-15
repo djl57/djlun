@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box" ref="article">
+  <article   ref="article">
     <header @click="showNav" class="catalog-to-top">
       <h1>目录</h1>
     </header>

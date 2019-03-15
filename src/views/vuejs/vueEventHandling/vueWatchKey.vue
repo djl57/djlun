@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>按键修饰符</h2>
     <p>@keyup.enter="submit" 当按键enter时submit</p>
     <p>@keyup.13 回车</p>

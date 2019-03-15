@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>静态资源中间件有什么用？</h2>
     <p>html中引入外部css文件</p>
     <p>在static/static01.js中引入koa-static，在index02.html中引入了css文件</p>

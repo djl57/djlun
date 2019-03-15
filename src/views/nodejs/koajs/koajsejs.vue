@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>koa中如何使用ejs模板引擎</h2>
     <p>（1）安装koa-views：npm i --save koa-views</p>
     <p>（2）安装ejs：npm i ejs --save</p>

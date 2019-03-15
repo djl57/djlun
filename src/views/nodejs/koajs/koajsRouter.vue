@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>路由的概念</h2>
     <p>路由（routing）是由一个URI（路径）和一个特定的HTTP方法（GET、POST等）组成的，涉及到应用如何响应客户端对某个
       网站节点的访问（通俗地说，就是根据不同的URL地址，加载不同的页面实现不同的功能）。

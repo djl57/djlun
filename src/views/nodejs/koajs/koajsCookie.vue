@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>什么是cookie？</h2>
     <p>（1）cookie保存在浏览器客户端</p>
     <p>（2）可以让我们用同一个浏览器访问同一个域名的时候共享数据</p>

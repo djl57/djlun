@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h1>数组去重</h1>
     <section>
       <h2>原始方法</h2>

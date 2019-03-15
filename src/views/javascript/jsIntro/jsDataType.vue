@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <header>
       <h1>js 数据类型</h1>
     </header>

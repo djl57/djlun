@@ -1,5 +1,5 @@
 <template>
-  <div class="app-box">
+  <div>
     <h1>{{ curArticle[0].title }}</h1>
     <p class="color2">总字数：{{ fontsize }}（包括标点符号）</p>
     <p v-show="curArticle" v-for="item in curArticle[0].content" :key="item" v-html="item"></p>

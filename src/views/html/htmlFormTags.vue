@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <header class="catalog-to-top">
       <ul>
         <li v-for="item in tags" :key="item.id" class="bold">

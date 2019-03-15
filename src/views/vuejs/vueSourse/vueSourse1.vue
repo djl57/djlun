@@ -1,5 +1,5 @@
 <template>
-  <div class="app-box">
+  <div  >
     <h2>什么是v-model？</h2>
     <p>首先，打开<a href="https://cn.vuejs.org/v2/api/#v-model">官方文档</a>，查看v-model API。</p>
     <p>官方对它的描述是：在表单控件或者组件上创建双向绑定（随表单控件类型不同而不同）。</p>

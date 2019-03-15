@@ -4,10 +4,8 @@
   .app-container {
     margin: 0 6px;
   }
-  .app-box {
-    height: calc(100vh - 140px);
-    overflow-y: auto;
-    overflow-x: hidden;
+  .article-box {
+    min-height: calc(100vh - 140px);
   }
   .home-box {
     height: calc(100vh - 70px);
@@ -23,9 +21,10 @@
     color: rgba(0, 150, 136, 0.5);
     border-radius: 8px;
   }
-  .article-main {
-    min-height: calc(100vh - 90px);
-    @include border-bottom(rgba(187, 187, 187, 0.6))
+  .article-layout {
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .aside, .none-aside {
     position: fixed;

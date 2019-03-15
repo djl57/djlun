@@ -1,5 +1,5 @@
 <template>
-  <div class="app-box">
+  <div  >
     <aside :class="aside? 'aside':'none-aside'">
       <h1 @click="showAside">{{ catalog }}</h1>
       <ol>

@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>js 中</h2>
     <p><code>delete obj.name</code></p>
     <h2>vue 中</h2>

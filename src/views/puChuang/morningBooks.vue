@@ -1,12 +1,12 @@
 <template>
-  <div class="morningBooks">
-    <div class="article-main">
-      <v-header></v-header>
-      <bread-crumb></bread-crumb>
-      <morning-main class="app-container"></morning-main>
+  <div>
+    <v-header></v-header>
+    <bread-crumb></bread-crumb>
+    <div class="article-layout">
+      <morning-main class="border-bottom article-box app-container"></morning-main>
+      <nav-search></nav-search>
+      <v-footer></v-footer>
     </div>
-    <nav-search></nav-search>
-    <v-footer></v-footer>
   </div>
 </template>
 

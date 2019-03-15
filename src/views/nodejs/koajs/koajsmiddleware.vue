@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <h2>什么是koa的中间件</h2>
     <p>中间件就是匹配路由之前或匹配路由完成做的一系列操作。在express里面是一个函数。</p>
 

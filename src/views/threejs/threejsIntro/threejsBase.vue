@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <header>
       <h1>读threejs文档记录</h1>
       <p>转载自 http://www.hewebgl.com</p>

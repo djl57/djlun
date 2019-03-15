@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <img src="../../../assets/images/prototype.png" width="90%">
     <h2>一些概念</h2>
     <h3>构造函数</h3>

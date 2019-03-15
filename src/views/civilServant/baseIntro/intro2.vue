@@ -1,5 +1,5 @@
 <template>
-  <article class="app-box">
+  <article  >
     <main>
       <ol>
         <li>资料分析25~30分钟；数量关系15~20分钟；数资一起40~50分钟。</li>

@@ -1,5 +1,5 @@
 <template>
-  <div class="app-box">
+  <div>
     放弃
   </div>
 </template>
