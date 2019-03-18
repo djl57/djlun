@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [koajs] = res
+let [koajs, mongodb] = res
 
 const route = [
   {
@@ -24,7 +24,18 @@ const route = [
       type: 'nodejs'
     }
   },
-  ...koajs
+  {
+    path: '/mongodb',
+    name: 'mongodb',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: 'mongodb',
+      level: 2,
+      type: 'nodejs'
+    }
+  },
+  ...koajs,
+  ...mongodb
 ]
 
 export {
