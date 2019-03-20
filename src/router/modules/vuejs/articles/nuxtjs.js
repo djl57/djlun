@@ -1,22 +1,33 @@
-const nuxtjs = [
-  {
-    path: '/nuxtjsBase',
-    name: 'nuxtjsBase',
+const nuxtjs = []
+const data = [
+  { name: 'nuxtAxios', title: 'nuxt中使用axios' },
+  { name: 'nuxtkoa2', title: '在nuxt中使用koa2' },
+  { name: 'nuxtjsBase', title: 'nuxtjs 基础' },
+  { name: 'koaPost', title: 'koa post获取不到数据' },
+  { name: 'nuxtUseScss', title: 'nuxt引用scss' },
+  { name: 'nuxtCss', title: 'nuxt引入通用样式' },
+  { name: 'nuxtEslint', title: 'nuxt关闭、开启eslint' },
+]
+data.forEach(el => {
+  nuxtjs.push({
+    path: `/${el.name}`,
+    name: `${el.name}`,
     component: () => import('@/components/base'),
     meta: {
-      title: 'nuxtjs 基础',
+      title: `${el.title}`,
       type: 'nuxtjs'
     },
-    redirect: '/nuxtjsBase/nuxtjsBaseIndex',
+    redirect: `/${el.name}/${el.name}Index`,
     children: [
       {
-        path: 'nuxtjsBaseIndex',
-        name: 'nuxtjsBaseIndex',
-        component: () => import('@/views/vuejs/nuxtjs/nuxtjsBase')
+        path: `${el.name}Index`,
+        name: `${el.name}Index`,
+        component: () => import(`@/views/vuejs/nuxtjs/${el.name}`)
       }
     ]
-  }
-]
+  })
+})
 export {
   nuxtjs
 }
+

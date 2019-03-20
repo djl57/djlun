@@ -63,6 +63,25 @@
         <td>104</td>
       </tr>
     </table>
+
+    <table>
+      <tr>
+        <th>年份</th>
+        <th>言语理解与表达</th>
+        <th>数量关系</th>
+        <th>判断推理</th>
+        <th>资料分析</th>
+        <th>常识判断</th>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>35</td>
+        <td>25</td>
+        <td>40</td>
+        <td>20</td>
+        <td>20</td>
+      </tr>
+    </table>
   </div>
 </template>
 

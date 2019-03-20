@@ -18,7 +18,8 @@ li {
 }
 h1,h2,h3,h4,h5,h6 {
   font-size: 1em;
-  margin: 10px 0;
+  padding: 5px 0;
+  margin: 0;
 }
 h1 {
   text-align: center;
@@ -52,7 +53,7 @@ blockquote {
   position: relative;
   padding-left: 10px;
   color: #7d7d7d;
-  margin: 10px 0;
+  padding: 5px 0;
   &::before {
     content: '';
     position: absolute;
