@@ -1,5 +1,6 @@
 const nuxtjs = []
 const data = [
+  { name: 'nuxtmongo', title: 'nodejs 中使用mongodb的api文档' },
   { name: 'nuxtAxios', title: 'nuxt中使用axios' },
   { name: 'nuxtkoa2', title: '在nuxt中使用koa2' },
   { name: 'nuxtjsBase', title: 'nuxtjs 基础' },

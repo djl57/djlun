@@ -2,7 +2,8 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [nuxtjs, operateObj, readProject, vueEventHandling, vueRouter, vueSkill, vueSourse, vueVuex] = res
+let [nuxtjs, operateObj, readProject, vueEventHandling, vueRouter, vueSkill, vueSourse, vueVuex,
+webpack] = res
 
 const route = [
   {
@@ -24,6 +25,7 @@ const datas = [
   { name: 'nuxtjs', title: 'Nuxt.js' },
   { name: 'operateObj', title: '操作对象' },
   { name: 'vueEventHandling', title: 'vue 事件处理' },
+  { name: 'webpack', title: 'webpack' },
 ]
 datas.forEach(el => {
   route.push({
@@ -45,6 +47,7 @@ route.push(...readProject)
 route.push(...nuxtjs)
 route.push(...operateObj)
 route.push(...vueEventHandling)
+route.push(...webpack)
 
 export {
   route
