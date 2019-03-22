@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [jsIntro, jsArray, jsInterview, jsOptimization] = res
+let [jsIntro, jsArray, jsInterview, jsOptimization, txMap, wechatGames] = res
 
 const route = [
   {
@@ -54,10 +54,32 @@ const route = [
       type: 'javascript'
     }
   },
+  {
+    path: '/wechatGames',
+    name: 'wechatGames',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: '微信小游戏',
+      level: 2,
+      type: 'javascript'
+    }
+  },
+  {
+    path: '/txMap',
+    name: 'txMap',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: '腾讯地图',
+      level: 2,
+      type: 'javascript'
+    }
+  },
   ...jsIntro,
   ...jsArray,
   ...jsInterview,
-  ...jsOptimization
+  ...jsOptimization,
+  ...txMap,
+  ...wechatGames
 ]
 
 export {

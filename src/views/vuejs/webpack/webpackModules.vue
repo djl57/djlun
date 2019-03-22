@@ -13,8 +13,6 @@
       <li>webpack-dev-middleware：可以把 webpack 处理后的文件传递给一个服务器(server)</li>
       <li>配置mode: "production"：可以在打包时，把没有import用到的方法删减掉，使打包文件更精简。</li>
       <li>启用 HMR（模块热替换）：当文件内部发生变更时可以告诉 webpack 接受更新的模块</li>
-      <li></li>
-      <li></li>
     </ol>
   </article>
 </template>

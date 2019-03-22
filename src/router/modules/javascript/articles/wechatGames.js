@@ -1,28 +1,26 @@
-const mongodb = []
+const wechatGames = []
 const data = [
-  { name: 'quickStart', title: 'Quick Start' },
-  { name: 'tutorials', title: 'Tutorials' },
-  { name: 'mongodbCommand', title: 'mongodb基本命令' },
+  { name: 'wechatgamestart', title: 'start' },
 ]
 data.forEach(el => {
-  mongodb.push({
+  wechatGames.push({
     path: `/${el.name}`,
     name: `${el.name}`,
     component: () => import('@/components/base'),
     meta: {
       title: `${el.title}`,
-      type: 'mongodb'
+      type: 'wechatGames'
     },
     redirect: `/${el.name}/${el.name}Index`,
     children: [
       {
         path: `${el.name}Index`,
         name: `${el.name}Index`,
-        component: () => import(`@/views/nodejs/mongodb/${el.name}`)
+        component: () => import(`@/views/javascript/wechatGames/${el.name}`)
       }
     ]
   })
 })
 export {
-  mongodb
+  wechatGames
 }

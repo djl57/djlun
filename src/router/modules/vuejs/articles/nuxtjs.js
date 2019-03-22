@@ -1,5 +1,6 @@
 const nuxtjs = []
 const data = [
+  { name: 'error01', title: 'NuxtServerError connect ECONNREFUSED 127.0.0.1:80' },
   { name: 'nuxtmongo', title: 'nodejs 中使用mongodb的api文档' },
   { name: 'nuxtAxios', title: 'nuxt中使用axios' },
   { name: 'nuxtkoa2', title: '在nuxt中使用koa2' },
