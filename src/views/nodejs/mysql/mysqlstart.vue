@@ -1,17 +1,16 @@
 <template>
   <article class="app-box">
-    <h3>nodejs连接mongodb官方文档</h3>
-    <p><a href="http://mongodb.github.io/node-mongodb-native/3.1/">MongoDB Node.js Driver Documentation</a></p>
-    
+    <h2>文档</h2>
+    <p><a href="https://www.oschina.net/translate/node-mysql-tutorial">Node-MySQL 官方文档 </a></p>
   </article>
 </template>
 
 <script>
 export default {
-  name: 'tutorials',
+  name: 'mysqlstart',
   data() {
     return {
-      createTime: '2019-03-18 09:44:00'
+      createTime: '2019-04-15 13:45:00'
     }
   },
   components: {

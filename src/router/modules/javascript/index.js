@@ -2,7 +2,7 @@ const re = /\.\/(.*)\.js/
 let res = (r => {
   return r.keys().map(key => r(key)[key.match(re)[1]]);
 })(require.context('./articles', false, /\.js$/))
-let [jsIntro, jsArray, jsInterview, jsOptimization, txMap, wechatGames] = res
+let [jsIntro, jsArray, jsInterview, jsOptimization, txMap, wechatGames, vscode] = res
 
 const route = [
   {
@@ -30,6 +30,16 @@ const route = [
     component: () => import('@/views/home/secondTitle'),
     meta: {
       title: '数组',
+      level: 2,
+      type: 'javascript'
+    }
+  },
+  {
+    path: '/echarts',
+    name: 'echarts',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: 'echarts',
       level: 2,
       type: 'javascript'
     }
@@ -65,6 +75,16 @@ const route = [
     }
   },
   {
+    path: '/vscode',
+    name: 'vscode',
+    component: () => import('@/views/home/secondTitle'),
+    meta: {
+      title: 'vscode',
+      level: 2,
+      type: 'javascript'
+    }
+  },
+  {
     path: '/txMap',
     name: 'txMap',
     component: () => import('@/views/home/secondTitle'),
@@ -79,7 +99,8 @@ const route = [
   ...jsInterview,
   ...jsOptimization,
   ...txMap,
-  ...wechatGames
+  ...wechatGames,
+  ...vscode
 ]
 
 export {

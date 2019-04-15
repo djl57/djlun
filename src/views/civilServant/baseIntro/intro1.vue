@@ -26,7 +26,19 @@
         <tr><td>22（62.8%）</td><td>21（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>78（60%）</td></tr>
 
         <tr><td rowspan="2">2012</td><td>35</td><td>25</td><td>35</td><td>15</td><td>20（综合知识）</td><td>130</td></tr>
-        <tr><td>22（62.8%）</td><td>21（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>78（60%）</td></tr>
+        <tr><td>20（57.1%）</td><td>13（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>68（52.3%）</td></tr>
+
+        <tr><td rowspan="2">2014</td><td>35</td><td>25</td><td>35</td><td>15</td><td>20（综合知识）</td><td>130</td></tr>
+        <tr><td>20（57.1%）</td><td>13（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>68（52.3%）</td></tr>
+
+        <tr><td rowspan="2">2013</td><td>35</td><td>25</td><td>35</td><td>15</td><td>20（综合知识）</td><td>130</td></tr>
+        <tr><td>0</td><td>13（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>68（52.3%）</td></tr>
+
+        <tr><td rowspan="2">2015</td><td>35</td><td>25</td><td>35</td><td>15</td><td>20（综合知识）</td><td>130</td></tr>
+        <tr><td>0</td><td>13（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>68（52.3%）</td></tr>
+
+        <tr><td rowspan="2">2017</td><td>35</td><td>25</td><td>35</td><td>15</td><td>20（综合知识）</td><td>130</td></tr>
+        <tr><td>0</td><td>13（84%）</td><td>24（68.6%）</td><td>11（73.3%）</td><td>0</td><td>68（52.3%）</td></tr>
       </table>
     </div>
   </div>
